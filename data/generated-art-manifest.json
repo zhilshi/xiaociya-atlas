@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "attribution": "小词芽 / WordSprout illustrations — original drawings in the style of children's picture-book gouache; not Word Atlas assets.",
+  "words": {
+    "OK": {
+      "stem": "ws-ok",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:51:21.608Z"
+    },
+    "goodbye": {
+      "stem": "ws-goodbye",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:51:21.828Z"
+    },
+    "no": {
+      "stem": "ws-no",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:51:22.050Z"
+    },
+    "sorry": {
+      "stem": "sorry",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:52:10.726Z"
+    },
+    "hi": {
+      "stem": "ws-hi",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:52:10.914Z"
+    },
+    "yes": {
+      "stem": "ws-yes",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:52:11.102Z"
+    },
+    "baby": {
+      "stem": "baby",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:52:11.302Z"
+    },
+    "dad": {
+      "stem": "ws-dad",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:52:11.496Z"
+    },
+    "mum": {
+      "stem": "ws-mum",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:01.119Z"
+    },
+    "eight": {
+      "stem": "ws-eight",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:01.320Z"
+    },
+    "five": {
+      "stem": "ws-five",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:01.532Z"
+    },
+    "six": {
+      "stem": "ws-six",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:01.737Z"
+    },
+    "seven": {
+      "stem": "ws-seven",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:47.445Z"
+    },
+    "ten": {
+      "stem": "ws-ten",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:47.845Z"
+    },
+    "three": {
+      "stem": "ws-three",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:48.171Z"
+    },
+    "two": {
+      "stem": "ws-two",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:48.489Z"
+    },
+    "kitty": {
+      "stem": "ws-kitty",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:53:48.821Z"
+    },
+    "bear": {
+      "stem": "bear",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:54:32.225Z"
+    },
+    "song": {
+      "stem": "ws-song",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:54:32.599Z"
+    },
+    "happy": {
+      "stem": "ws-happy",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:54:32.893Z"
+    },
+    "point": {
+      "stem": "point",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:54:33.196Z"
+    },
+    "go": {
+      "stem": "ws-go",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:54:33.496Z"
+    },
+    "what": {
+      "stem": "ws-what",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:20.217Z"
+    },
+    "where": {
+      "stem": "ws-where",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:20.588Z"
+    },
+    "who": {
+      "stem": "ws-who",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:20.936Z"
+    },
+    "he": {
+      "stem": "ws-he",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:21.246Z"
+    },
+    "I": {
+      "stem": "ws-i",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:21.534Z"
+    },
+    "me": {
+      "stem": "ws-me",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:55.820Z"
+    },
+    "she": {
+      "stem": "ws-she",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:56.110Z"
+    },
+    "we": {
+      "stem": "ws-we",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:56.393Z"
+    },
+    "have": {
+      "stem": "ws-have",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:55:56.721Z"
+    }
+  }
+}

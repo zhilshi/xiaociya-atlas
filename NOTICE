@@ -40,3 +40,10 @@ Third-party:
 - Emoji artwork: rendered by the device's emoji font.
 - Pronunciation fallback when no Word Atlas recording exists: the device's speech synthesis
   voice, then online TTS (Youdao dictvoice, then Google Translate TTS) streamed at play time.
+
+CONTENT — 小词芽 / WordSprout illustrations (original)
+Files under public/wa/gen/ and entries listed in data/generated-art-manifest.json are
+original WordSprout illustrations drawn for words that previously used only emoji or
+letter cards. They are inspired by the children's picture-book / gouache look of Word
+Atlas thumbs but are NOT Word Atlas original assets and must not be attributed as such.
+Credit: 小词芽 / WordSprout illustrations.

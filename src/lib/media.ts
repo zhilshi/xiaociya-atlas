@@ -4,7 +4,7 @@
  * ("core") and an advanced tier ("ext", 进阶扩展). Everything is fetched lazily from
  * public/wa/ and cached cache-first by the service worker.
  */
-import { WA_AUDIO, WA_CORE, WA_EXT, WA_IMG } from "../atlas/convert";
+import { WA_AUDIO, WA_CORE, WA_EXT, WA_GEN, WA_IMG } from "../atlas/convert";
 import type { Accent, WordRef } from "../atlas/types";
 
 const BASE = (typeof import.meta !== "undefined" && import.meta.env?.BASE_URL) || "/";
@@ -40,8 +40,14 @@ export const hasPicture = (w: WordRef) => !!(w.waFlags & WA_IMG);
 export const hasUpstreamAudio = (w: WordRef) => !!(w.waFlags & WA_AUDIO);
 export const hasKidContent = (w: WordRef) => !!(w.waFlags & WA_CORE);
 export const hasExtension = (w: WordRef) => !!(w.waFlags & WA_EXT);
+/** WordSprout-drawn illustration (public/wa/gen/), not an upstream Word Atlas thumb. */
+export const hasCustomArt = (w: WordRef) => !!(w.waFlags & WA_GEN);
 
-export const pictureUrl = (w: WordRef) => (hasPicture(w) ? `${BASE}wa/thumb/${w.wa}.webp` : "");
+export const pictureUrl = (w: WordRef) => {
+  if (!hasPicture(w) || !w.wa) return "";
+  const dir = hasCustomArt(w) ? "gen" : "thumb";
+  return `${BASE}wa/${dir}/${w.wa}.webp`;
+};
 export const audioUrl = (w: WordRef, accent: Accent) => (hasUpstreamAudio(w) ? `${BASE}wa/${accent}/${w.wa}.mp3` : "");
 
 const gradeFiles = new Map<number, Promise<Record<string, WaEntry>>>();

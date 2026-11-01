@@ -31,7 +31,9 @@ export interface WaManifest {
 export const WA_IMG = 1,
   WA_AUDIO = 2,
   WA_CORE = 4,
-  WA_EXT = 8;
+  WA_EXT = 8,
+  /** Custom WordSprout illustration under public/wa/gen/ (not Word Atlas). */
+  WA_GEN = 16;
 
 /** [id, en, zh, pos, grade, topicIndex, emoji, glyph, waStem, waFlags] */
 export type PackedWord = [string, string, string, string, number, number, string, string, string, number];
@@ -161,4 +163,23 @@ export function convert(rows: CsvRow[], v1: V1Lexicon, wa: WaManifest = { words:
   words.sort((a, b) => a[4] - b[4] || a[5] - b[5] || 0);
   // Array.prototype.sort is stable: CSV order is kept inside (grade, topic).
   return { version: 2, id: DATASET_V2, source, topics: defs.map(({ words: _w, ...t }) => t), words, aliases };
+}
+
+/** WordSprout custom art (data/generated-art-manifest.json) → WA_IMG|WA_GEN + stem. */
+export type GeneratedArtManifest = {
+  words?: Record<string, { stem: string; img?: boolean }>;
+};
+
+export function applyGeneratedArt(lex: PackedLexicon, gen: GeneratedArtManifest | null | undefined): number {
+  if (!gen?.words) return 0;
+  let n = 0;
+  for (const [en, meta] of Object.entries(gen.words)) {
+    if (!meta?.stem) continue;
+    const w = lex.words.find((row) => row[1] === en);
+    if (!w) continue;
+    w[8] = meta.stem;
+    w[9] = w[9] | WA_IMG | WA_GEN;
+    n++;
+  }
+  return n;
 }

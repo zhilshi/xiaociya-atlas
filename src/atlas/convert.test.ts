@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { convert, readRows, WA_CORE, WA_EXT, WA_IMG, type PackedLexicon, type V1Lexicon } from "./convert";
+import { applyGeneratedArt, convert, readRows, WA_CORE, WA_EXT, WA_GEN, WA_IMG, type PackedLexicon, type V1Lexicon } from "./convert";
 import { TOPICS_V2 } from "./topics-v2";
 
 const file = (p: string) => readFileSync(new URL(`../../${p}`, import.meta.url), "utf8");
@@ -9,6 +9,13 @@ const rows = readRows(file("data/wordlist-v2.csv"));
 const v1 = JSON.parse(file("data/legacy/lexicon-v1.json")) as V1Lexicon;
 const wa = JSON.parse(file("data/word-atlas-manifest.json"));
 const lex = convert(rows, v1, wa);
+let gen: { words?: Record<string, { stem: string }> } = { words: {} };
+try {
+  gen = JSON.parse(file("data/generated-art-manifest.json"));
+} catch {
+  /* optional */
+}
+applyGeneratedArt(lex, gen);
 const shipped = JSON.parse(file("src/data/lexicon-v2.json")) as PackedLexicon;
 
 test("CSV → data: 1717 words, 247/247/235/234/377/377 per grade", () => {
@@ -74,9 +81,19 @@ test("word atlas flags follow the manifest; core and extension are separate", ()
   assert.ok(withImg > 1200, `img ${withImg}`);
   for (const w of lex.words) {
     const m = wa.words[w[1]];
-    if (!m) assert.equal(w[9], 0);
-    else {
-      assert.equal(w[8], m.stem);
+    const custom = gen.words?.[w[1]];
+    if (!m) {
+      if (custom) {
+        assert.equal(w[8], custom.stem);
+        assert.ok(w[9] & WA_IMG);
+        assert.ok(w[9] & WA_GEN);
+      } else assert.equal(w[9], 0);
+    } else {
+      // Custom art may keep the WA audio stem or replace with ws-* when listed.
+      if (custom) {
+        assert.equal(w[8], custom.stem);
+        assert.ok(w[9] & WA_GEN);
+      } else assert.equal(w[8], m.stem);
       assert.equal(!!(w[9] & WA_CORE), !!m.core);
       assert.equal(!!(w[9] & WA_EXT), !!m.ext);
     }
