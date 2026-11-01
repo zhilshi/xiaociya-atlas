@@ -1,7 +1,6 @@
-/* Word Atlas offline cache: app shell network-first, everything else cache-first. */
-const VERSION = "atlas-v1";
+/* 小词芽 offline cache (adapted from Word Atlas, MIT): app shell network-first, everything else cache-first. */
+const VERSION = "wordsprout-v1";
 const SHELL = `${VERSION}-shell`;
-const MEDIA = `${VERSION}-media`;
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (event) => {
@@ -24,7 +23,7 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET" || req.headers.has("range")) return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
-  const isShell = req.mode === "navigate" || url.pathname.endsWith("/index.json");
+  const isShell = req.mode === "navigate";
   if (isShell) {
     event.respondWith(
       fetch(req)
@@ -43,8 +42,8 @@ self.addEventListener("fetch", (event) => {
         fetch(req).then((res) => {
           if (res.ok && res.type === "basic") {
             const copy = res.clone();
-            const name = /\/atlas\/(img|thumb|audio)\//.test(url.pathname) ? MEDIA : SHELL;
-            caches.open(name).then((c) => c.put(req, copy)).then(() => name === MEDIA && trim(MEDIA, 1500));
+            const name = SHELL;
+            caches.open(name).then((c) => c.put(req, copy)).then(() => trim(SHELL, 200));
           }
           return res;
         }),

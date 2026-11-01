@@ -1,5 +1,6 @@
-/** A short burst of ink-coloured particles from a point on screen (correct answers). */
-const COLORS = ["#c4573a", "#d39a2f", "#6f8f68", "#6f93ae", "#1e2640", "#e6b457"];
+/* Adapted from Word Atlas (https://github.com/designfuchen/word-atlas), MIT, © 2026 Word Atlas contributors. */
+/** A short burst of confetti from a point on screen (correct answers). */
+const COLORS = ["#ff8fab", "#ffd166", "#5cc98a", "#6cc4ff", "#b794f6", "#ff9f5a"];
 let canvas: HTMLCanvasElement | null = null;
 let parts: { x: number; y: number; vx: number; vy: number; r: number; c: string; life: number; rot: number; vr: number }[] = [];
 let raf = 0;

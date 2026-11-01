@@ -1,9 +1,17 @@
-import "@fontsource-variable/fraunces/opsz.css";
-import "@fontsource-variable/fraunces/opsz-italic.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import { unlockCues } from "./lib/sound";
+import { unlockAudio } from "./lib/speak";
 import "./styles/app.css";
+
+// Phones only allow audio after a user gesture: unlock on the very first touch.
+const unlock = () => {
+  unlockAudio();
+  unlockCues();
+  window.removeEventListener("pointerdown", unlock, true);
+};
+window.addEventListener("pointerdown", unlock, true);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

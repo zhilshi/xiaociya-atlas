@@ -3,7 +3,7 @@ import { transition } from "./motion";
 
 export type Route =
   | { page: "today" }
-  | { page: "atlas"; topic?: string; level?: string; q?: string; view?: string }
+  | { page: "garden"; bed?: string }
   | { page: "learn" }
   | { page: "practice" }
   | { page: "me" }
@@ -11,52 +11,47 @@ export type Route =
 
 export interface Location {
   route: Route;
-  /** Word sheet open on top of the route. */
+  /** Word card open on top of the route. */
   word: string | null;
 }
 
-function parse(hash: string): Location {
+export function parse(hash: string): Location {
   const [path, query = ""] = hash.replace(/^#/, "").split("?");
   const params = new URLSearchParams(query);
   const word = params.get("w");
   const seg = path.split("/").filter(Boolean);
   let route: Route = { page: "today" };
-  if (seg[0] === "atlas")
-    route = { page: "atlas", topic: params.get("topic") || undefined, level: params.get("level") || undefined, q: params.get("q") || undefined, view: params.get("view") || undefined };
+  if (seg[0] === "garden") route = { page: "garden", bed: params.get("bed") || undefined };
   else if (seg[0] === "learn") route = { page: "learn" };
   else if (seg[0] === "practice") route = { page: "practice" };
   else if (seg[0] === "me") route = { page: "me" };
   else if (seg[0] === "about") route = { page: "about" };
-  else if (seg[0] === "w" && seg[1]) return { route: { page: "atlas" }, word: decodeURIComponent(seg[1]) };
   return { route, word };
 }
 
 export function href(route: Route, word?: string | null) {
   const params = new URLSearchParams();
-  if (route.page === "atlas") {
-    if (route.topic) params.set("topic", route.topic);
-    if (route.level) params.set("level", route.level);
-    if (route.q) params.set("q", route.q);
-    if (route.view) params.set("view", route.view);
-  }
+  if (route.page === "garden" && route.bed) params.set("bed", route.bed);
   if (word) params.set("w", word);
   const q = params.toString();
   return `#/${route.page === "today" ? "" : route.page}${q ? `?${q}` : ""}`;
 }
 
-let loc = parse(location.hash);
+let loc = typeof location === "undefined" ? parse("") : parse(location.hash);
 const subs = new Set<() => void>();
-window.addEventListener("hashchange", () => {
-  const next = parse(location.hash);
-  const pageChange = next.route.page !== loc.route.page;
+const set = (next: Location, animate: boolean) => {
   const update = () => {
     loc = next;
     subs.forEach((f) => f());
   };
-  // Crossfade between pages; the word sheet animates on its own.
-  if (pageChange && !next.word) transition(update);
+  if (animate) transition(update);
   else update();
-});
+};
+if (typeof window !== "undefined")
+  window.addEventListener("hashchange", () => {
+    const next = parse(location.hash);
+    set(next, next.route.page !== loc.route.page && !next.word);
+  });
 
 export const useLocation = () =>
   useSyncExternalStore(
@@ -72,15 +67,8 @@ export function go(route: Route, word?: string | null, replace = false) {
   if (replace) history.replaceState(null, "", h);
   else history.pushState(null, "", h);
   const next = parse(h);
-  const pageChange = next.route.page !== loc.route.page;
-  const update = () => {
-    loc = next;
-    subs.forEach((f) => f());
-  };
-  if (pageChange && !replace) transition(update);
-  else update();
+  set(next, next.route.page !== loc.route.page && !replace);
 }
 
 export const openWord = (id: string) => go(loc.route, id);
-export const closeWord = () => go(loc.route, null);
-export const currentLocation = () => loc;
+export const closeWord = () => go(loc.route, null, true);

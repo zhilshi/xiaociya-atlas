@@ -1,25 +1,23 @@
-export function Mark({ size = 28 }: { size?: number }) {
+/** 小词芽 sprout mark: two leaves on a stem. */
+export function Mark({ size = 30 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" className="mark">
-      <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="16" cy="16" r="10.5" fill="none" stroke="currentColor" strokeWidth="0.75" strokeDasharray="1.2 2.2" opacity=".55" />
-      <g className="mark-needle">
-        <path d="M16 3.5 19 16 16 28.5 13 16Z" fill="currentColor" opacity=".9" />
-        <path d="M16 3.5 19 16H13Z" fill="var(--terra)" />
-      </g>
-      <path d="M3.5 16 16 13.4 28.5 16 16 18.6Z" fill="currentColor" opacity=".35" />
-      <circle cx="16" cy="16" r="1.6" fill="var(--paper)" />
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#EAF8EF" />
+      <path d="M32 52V30" stroke="#3BA55C" strokeWidth="5" strokeLinecap="round" />
+      <path d="M32 32C32 22 24 15 13 16C13 27 20 33 32 32Z" fill="#5CC98A" />
+      <path d="M32 28C32 18 40 11 51 12C51 23 44 29 32 28Z" fill="#8EDB6A" />
+      <ellipse cx="32" cy="53" rx="13" ry="4" fill="#C9A27A" opacity=".55" />
     </svg>
   );
 }
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo() {
   return (
     <span className="logo">
       <Mark />
       <span className="logo-text">
-        <b>词光</b>
-        {!compact && <small>Word Atlas</small>}
+        <b>小词芽</b>
+        <small>WordSprout</small>
       </span>
     </span>
   );
