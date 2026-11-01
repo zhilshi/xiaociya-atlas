@@ -32,7 +32,7 @@ test("rejects other progress versions and unknown settings", () => {
 
 test("defaults: light, no grade, onboarding pending", () => {
   const s = sanitizeSettings(null);
-  assert.equal(s.schema, 4);
+  assert.equal(s.schema, 5);
   assert.equal(s.advanced, false);
   assert.equal(s.gardenGrade, 0);
   assert.equal(s.grade, 0);
@@ -62,12 +62,12 @@ test("grade is validated and drives the daily goal", () => {
   assert.equal(settingsForGrade(defaultSettings, 5).grade, 5);
 });
 
-test("schema 3 → 4: 进阶扩展 defaults on for grades 5–6, off for 1–4", () => {
+test("schema 3 → 5: 进阶扩展 defaults on for grades 5–6, off for 1–4", () => {
   for (const g of [1, 2, 3, 4]) assert.equal(sanitizeSettings({ schema: 3, grade: g, onboarded: true }).advanced, false);
   for (const g of [5, 6]) assert.equal(sanitizeSettings({ schema: 3, grade: g, onboarded: true }).advanced, true);
-  // An explicit schema-4 choice is kept; switching grade in 我的 resets to that grade's default.
+  // An explicit schema-4/5 choice is kept; switching grade in 我的 resets to that grade's default.
   assert.equal(sanitizeSettings({ schema: 4, grade: 2, advanced: true }).advanced, true);
-  assert.equal(sanitizeSettings({ schema: 4, grade: 6, advanced: false }).advanced, false);
+  assert.equal(sanitizeSettings({ schema: 5, grade: 6, advanced: false }).advanced, false);
   assert.equal(settingsForGrade(defaultSettings, 5).advanced, true);
   assert.equal(settingsForGrade({ ...defaultSettings, advanced: true }, 3).advanced, false);
   assert.equal(sanitizeSettings({ gardenGrade: 9 }).gardenGrade, 9);

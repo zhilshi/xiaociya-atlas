@@ -11,6 +11,8 @@ const lexicon = JSON.parse(readFileSync(new URL("../src/data/lexicon-v2.json", i
 // Packed rows: [id, en, zh, pos, grade, topicIndex, emoji, glyph, waStem, waFlags]
 const words = lexicon.words.map(([id, en, , , grade, t, , , , flags]) => ({ id, en, grade, topic: lexicon.topics[t].id, flags }));
 const GRADE = 3;
+const CHILD_A = "demo-child-dou";
+const CHILD_B = "demo-child-ya";
 // Demo garden: grade-3 nature/weather/places beds partly grown, plus some grade 1–2 words to review.
 const DEMO_TOPICS = ["nature", "weather", "places", "family", "feelings"];
 const demoIds = [
@@ -43,59 +45,93 @@ function demoProgress(now) {
   return { version: 2, datasetId: "wordsprout-v2", cards, bookmarks: [], days, typing: [], session: null, mistakes: [] };
 }
 
-// CHROMIUM_PATH lets you reuse an already-installed Chromium instead of `npx playwright install`.
-const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
-const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "zh-CN" });
-// Headless Chromium has no speakers: pretend audio plays so no "no sound" toast covers the UI.
-await ctx.addInitScript(() => {
-  HTMLMediaElement.prototype.play = function () {
-    setTimeout(() => this.dispatchEvent(new Event("playing")), 20);
-    return Promise.resolve();
-  };
-});
-let page = await ctx.newPage();
-const shot = async (name) => {
+const launchOpts = process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {};
+const browser = await chromium.launch(launchOpts);
+
+async function newCtx(seedDemo) {
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "zh-CN" });
+  await ctx.addInitScript(() => {
+    HTMLMediaElement.prototype.play = function () {
+      setTimeout(() => this.dispatchEvent(new Event("playing")), 20);
+      return Promise.resolve();
+    };
+  });
+  if (seedDemo) {
+    const progressJson = JSON.stringify(demoProgress(Date.now()));
+    await ctx.addInitScript(
+      ({ progressJson, CHILD_A, CHILD_B }) => {
+        if (localStorage.getItem("__demo_seeded")) return;
+        const profiles = {
+          version: 1,
+          activeId: CHILD_A,
+          children: [
+            { id: CHILD_A, name: "豆豆", createdAt: 1, grade: 3, dailyNew: 8, advanced: false, gardenGrade: 0, onboarded: true },
+            { id: CHILD_B, name: "芽芽", createdAt: 2, grade: 1, dailyNew: 5, advanced: false, gardenGrade: 0, onboarded: true },
+          ],
+        };
+        const device = { schema: 5, accent: "us", autoplay: true, retention: 0.9, sfx: true };
+        const empty = { version: 2, datasetId: "wordsprout-v2", cards: {}, bookmarks: [], days: {}, typing: [], session: null, mistakes: [] };
+        localStorage.setItem("wordsprout:profiles", JSON.stringify(profiles));
+        localStorage.setItem("wordsprout:device", JSON.stringify(device));
+        localStorage.setItem(`wordsprout:progress:${CHILD_A}:wordsprout-v2`, progressJson);
+        localStorage.setItem(`wordsprout:progress:${CHILD_B}:wordsprout-v2`, JSON.stringify(empty));
+        localStorage.setItem("__demo_seeded", "1");
+      },
+      { progressJson, CHILD_A, CHILD_B },
+    );
+  }
+  return ctx;
+}
+
+const shot = async (page, name) => {
   await page.waitForTimeout(450);
   await page.screenshot({ path: `${OUT}${name}.png` });
   console.log("saved", name);
 };
 
-await page.goto(BASE);
-await page.getByRole("radio", { name: /三年级/ }).click();
-await shot("1-onboarding-grade");
-await page.getByRole("button", { name: /开始种花/ }).click();
-
-// Seed demo progress before the app boots (the running app would overwrite it on pagehide).
-await page.waitForTimeout(400);
-await page.close();
-await ctx.addInitScript((p) => {
-  if (!localStorage.getItem("__demo_seeded")) {
-    localStorage.setItem("wordsprout:progress:wordsprout-v2", p);
-    localStorage.setItem("__demo_seeded", "1");
-  }
-}, JSON.stringify(demoProgress(Date.now())));
-page = await ctx.newPage();
-await page.goto(BASE + "#/");
-await shot("2-today");
-
-await page.goto(BASE + "#/garden");
-await shot("3-garden");
-await page.goto(BASE + `#/garden?bed=${BED}`);
-await shot("4-garden-bed");
-await page.goto(BASE + `#/garden?bed=${BED}&w=${CARD.id}`);
-await page.waitForSelector(".word-extras, .word-card", { timeout: 5000 });
-await page.waitForTimeout(800); // lazy picture + example file
-await shot("5-word-card");
-console.log("bed", BED, "card", CARD.id);
-
-await page.goto(BASE + "#/");
-await page.getByRole("button", { name: /开始今天的学习|继续学习/ }).click();
-for (let i = 0; i < 20 && (await page.getByRole("button", { name: /认识了/ }).count()); i++) await page.getByRole("button", { name: /认识了/ }).click();
-await page.waitForTimeout(600);
-await shot("6-practice-question");
-const first = page.locator(".option").first();
-if (await first.count()) {
-  await first.click();
-  await shot("7-practice-feedback");
+// 1) Onboarding (fresh install)
+{
+  const ctx = await newCtx(false);
+  const page = await ctx.newPage();
+  await page.goto(BASE);
+  await page.locator(".name-input").fill("豆豆");
+  await page.getByRole("radio", { name: /三年级/ }).click();
+  await shot(page, "1-onboarding-grade");
+  await ctx.close();
 }
+
+// 2–8) Seeded multi-kid demo
+{
+  const ctx = await newCtx(true);
+  const page = await ctx.newPage();
+  await page.goto(BASE + "#/");
+  await shot(page, "2-today");
+
+  await page.goto(BASE + "#/garden");
+  await shot(page, "3-garden");
+  await page.goto(BASE + `#/garden?bed=${BED}`);
+  await shot(page, "4-garden-bed");
+  await page.goto(BASE + `#/garden?bed=${BED}&w=${CARD.id}`);
+  await page.waitForSelector(".word-extras, .word-card", { timeout: 5000 });
+  await page.waitForTimeout(800);
+  await shot(page, "5-word-card");
+  console.log("bed", BED, "card", CARD.id);
+
+  await page.goto(BASE + "#/");
+  await page.getByRole("button", { name: /开始今天的学习|继续学习/ }).click();
+  for (let i = 0; i < 20 && (await page.getByRole("button", { name: /认识了/ }).count()); i++) await page.getByRole("button", { name: /认识了/ }).click();
+  await page.waitForTimeout(600);
+  await shot(page, "6-practice-question");
+  const first = page.locator(".option").first();
+  if (await first.count()) {
+    await first.click();
+    await shot(page, "7-practice-feedback");
+  }
+
+  await page.goto(BASE + "#/me");
+  await page.waitForSelector(".kids-list", { timeout: 5000 });
+  await shot(page, "8-kids-switch");
+  await ctx.close();
+}
+
 await browser.close();

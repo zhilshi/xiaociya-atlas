@@ -358,6 +358,42 @@ p {
   min-height: 1.5em;
   font-weight: 600;
 }
+
+.name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0 16px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.name-input {
+  width: 100%;
+  min-height: var(--tap);
+  border: 2px solid var(--line-strong);
+  border-radius: 18px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+}
+.name-input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px var(--green-soft);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .privacy-note {
   text-align: center;
   color: var(--muted);
@@ -1223,6 +1259,93 @@ p {
 }
 .switch:checked::after {
   transform: translateX(24px);
+}
+
+/* ---------- kids profiles ---------- */
+.kids-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.kids-hint,
+.stats-note {
+  margin: 0 0 4px;
+}
+.kids-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.kid-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: var(--bg-soft);
+  padding: 4px;
+}
+.kid-row.is-on {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+.kid-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  min-height: var(--tap);
+  padding: 6px 10px;
+  border-radius: 14px;
+}
+.kid-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--green);
+  border: 1px solid var(--line);
+}
+.kid-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.kid-meta b {
+  font-size: 1.05rem;
+}
+.kid-meta small {
+  color: var(--ink-2);
+  font-weight: 700;
+}
+.kid-icon {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink-2);
+  display: grid;
+  place-items: center;
+}
+.kid-editor {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px dashed var(--line-strong);
+}
+.kid-editor .btn-row {
+  margin-top: 12px;
+  flex-wrap: wrap;
 }
 .warn-box {
   padding: 12px 14px;

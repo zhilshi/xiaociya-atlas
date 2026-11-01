@@ -34,6 +34,7 @@ export function Today() {
   useAtlas();
   const progress = useStore((s) => s.progress);
   const settings = useStore((s) => s.settings);
+  const childName = useStore((s) => s.profiles.children.find((c) => c.id === s.profiles.activeId)?.name ?? "小朋友");
   const now = Date.now();
   const plan = todayPlan(atlas, progress, settings, now);
   const learnedToday = newToday(progress);
@@ -62,7 +63,8 @@ export function Today() {
     <div className="page today">
       <section className="hello">
         <h1>
-          {greeting()}！<span className="hello-grade">{settings.grade ? GRADE_LABEL[settings.grade] : ""}</span>
+          {greeting()}，{childName}！
+          <span className="hello-grade">{settings.grade ? GRADE_LABEL[settings.grade] : ""}</span>
         </h1>
         <p className="muted">今天也来给花园浇浇水吧 🌤️</p>
       </section>
