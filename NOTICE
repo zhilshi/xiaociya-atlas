@@ -1,0 +1,18 @@
+小词芽 WordSprout
+Copyright (c) 2026 小词芽 contributors
+
+This product is based on Word Atlas (词光) — https://github.com/designfuchen/word-atlas
+Copyright (c) 2026 Word Atlas contributors, licensed under the MIT License (see LICENSE).
+
+Reused and adapted from Word Atlas: project structure (React + Vite + hash router),
+the localStorage store and backup format, the FSRS scheduling wrapper (src/store/srs.ts),
+the session/queue logic (src/store/session.ts), the Sheet/Toast UI primitives and the
+celebration burst (src/lib/burst.ts). The IELTS word list, audio and dark theme were removed.
+
+Third-party:
+- ts-fsrs (MIT) — spaced-repetition scheduler.
+- lucide-react (ISC) — icons.
+- Emoji artwork: Google Noto Emoji (Apache-2.0), rendered by the device's emoji font.
+- Word list (src/data/lexicon.json): 395 primary-school words curated for 小词芽.
+- Pronunciation: the device's speech synthesis voice, falling back to online TTS
+  (Youdao dictvoice, then Google Translate TTS) streamed at play time; no audio is bundled.

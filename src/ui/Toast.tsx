@@ -10,6 +10,7 @@ const subs = new Set<() => void>();
 const emit = () => subs.forEach((f) => f());
 
 export function toast(text: string, tone: T["tone"] = "info") {
+  if (items.some((x) => x.text === text)) return; // same message already on screen
   const id = Date.now() + Math.random();
   items = [...items.slice(-2), { id, text, tone }];
   emit();
