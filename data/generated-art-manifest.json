@@ -187,6 +187,90 @@
       "img": true,
       "source": "wordsprout-gen",
       "updated": "2026-11-01T10:55:56.721Z"
+    },
+    "bye": {
+      "stem": "ws-bye",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:19.449Z"
+    },
+    "don't worry": {
+      "stem": "ws-dont-worry",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:19.748Z"
+    },
+    "hooray": {
+      "stem": "ws-hooray",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:20.040Z"
+    },
+    "oh dear": {
+      "stem": "ws-oh-dear",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:20.330Z"
+    },
+    "thank you": {
+      "stem": "ws-thank-you",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:20.637Z"
+    },
+    "well done": {
+      "stem": "ws-well-done",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:20.925Z"
+    },
+    "wow": {
+      "stem": "ws-wow",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:21.206Z"
+    },
+    "grandma": {
+      "stem": "ws-grandma",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:21.493Z"
+    },
+    "grandpa": {
+      "stem": "ws-grandpa",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:21.801Z"
+    },
+    "eleven": {
+      "stem": "ws-eleven",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T10:58:22.091Z"
+    },
+    "fourteen": {
+      "stem": "ws-fourteen",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T11:30:57.933Z"
+    },
+    "fifteen": {
+      "stem": "ws-fifteen",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T11:30:58.405Z"
+    },
+    "nineteen": {
+      "stem": "ws-nineteen",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T11:30:58.777Z"
+    },
+    "twenty": {
+      "stem": "ws-twenty",
+      "img": true,
+      "source": "wordsprout-gen",
+      "updated": "2026-11-01T11:30:59.148Z"
     }
   }
 }
