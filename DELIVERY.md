@@ -3,7 +3,7 @@
 Branch `xiaociya` of https://github.com/zhilshi/xiaociya-atlas. It is a fork of Word Atlas 词光 (MIT) by designfuchen / Word Atlas contributors. The LICENSE file is kept, and NOTICE plus the README carry the attribution.
 
 ## Preview
-- https://atlas.xiaociya.pages.dev (branch alias). This deploy's URL is https://fb4a01fa.xiaociya.pages.dev.
+- https://atlas.xiaociya.pages.dev (branch alias). The v2 deploy URL is https://91956272.xiaociya.pages.dev (build `index-rS5GiHmh.js`).
 - Both return HTTP 200 with `<title>小词芽 WordSprout · 小学英语单词花园</title>`.
 - This is a Cloudflare Pages **preview** deploy (`--branch=atlas`). The production deployment of project `xiaociya` was not touched and still serves the old standalone app.
 
