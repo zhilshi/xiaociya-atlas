@@ -4,6 +4,8 @@ import { isMastered } from "../store/srs";
 import { GRADE_LABEL, type SchoolGrade } from "../lib/grade";
 import { dayKey, exportBackup, importBackup, resetProgress, settingsForGrade, store, useStore, type Settings } from "../store/store";
 import { toast } from "../ui/Toast";
+import { useAtlas } from "../atlas/context";
+import { downloadGradePack } from "../lib/media";
 
 const GRADES: SchoolGrade[] = [1, 2, 3, 4, 5, 6];
 
@@ -13,6 +15,14 @@ export function Me() {
   const saveError = useStore((s) => s.saveError);
   const file = useRef<HTMLInputElement>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+  const atlas = useAtlas();
+  const [pack, setPack] = useState<number | null>(null);
+  const savePack = async () => {
+    setPack(0);
+    const r = await downloadGradePack(atlas.words, settings.grade || 1, settings.accent, (d, t) => setPack(Math.min(99, Math.round((d / t) * 100))));
+    setPack(100);
+    toast(r.failed ? `下载完成，${r.failed} 个文件没下好，可以稍后再试` : `已存好 ${r.total} 个图片和读音`, r.failed ? "warn" : "ok");
+  };
 
   const stats = useMemo(() => {
     const cards = Object.values(progress.cards);
@@ -106,6 +116,22 @@ export function Me() {
           <span>答题音效</span>
           <input type="checkbox" className="switch" checked={settings.sfx} onChange={(e) => set({ sfx: e.target.checked })} />
         </label>
+        <label className="row">
+          <span>
+            进阶扩展
+            <small className="row-note">词卡里多一个「进阶」折叠区：更多例句、词族、近反义词。5–6 年级默认打开。</small>
+          </span>
+          <input type="checkbox" className="switch" checked={settings.advanced} onChange={(e) => set({ advanced: e.target.checked })} />
+        </label>
+        <div className="row">
+          <span>
+            离线包
+            <small className="row-note">把{settings.grade ? `${settings.grade} 年级` : "本年级"}的图片和读音存到这台设备，没网也能学。</small>
+          </span>
+          <button className="btn btn-soft btn-sm" disabled={pack !== null && pack < 100} onClick={() => void savePack()}>
+            {pack === null ? "下载" : pack < 100 ? `${pack}%` : "已下载 ✓"}
+          </button>
+        </div>
       </section>
 
       <section className="card settings">

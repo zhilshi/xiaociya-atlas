@@ -1,6 +1,7 @@
 /* Adapted from Word Atlas (https://github.com/designfuchen/word-atlas), MIT, © 2026 Word Atlas contributors. */
 import type { Atlas, WordRef } from "../atlas/types";
 import { gradeConfig, type GradeConfig } from "../lib/grade";
+import { pictured } from "../lib/media";
 import { hashSeed, normalize, shuffle } from "../lib/text";
 import { isMastered, review, Rating, type Grade } from "./srs";
 import { bumpDay, dayKey, store, type ActiveSession, type Progress, type QuizKind, type Settings, type Step } from "./store";
@@ -16,20 +17,27 @@ export function newToday(p: Progress) {
   return p.days[dayKey()]?.n ?? 0;
 }
 
-/** Next unseen words along the path: the child's grade band first, then easier bands, then harder. */
+/**
+ * Next unseen words. New words come from the learner's own grade; once that grade is used
+ * up, unlearned words from lower grades (nearest first), then higher grades. Reviews of
+ * any grade stay in todayPlan's due list, so lower-grade words keep coming back.
+ */
+export function gradeOrder(grade: number): number[] {
+  const g = grade >= 1 && grade <= 6 ? grade : 3;
+  const lower = [5, 4, 3, 2, 1].filter((x) => x < g);
+  const higher = [2, 3, 4, 5, 6].filter((x) => x > g);
+  return [g, ...lower, ...higher];
+}
+
 export function nextNew(atlas: Atlas, p: Progress, settings: Settings, count: number) {
-  const band = gradeConfig(settings.grade).band;
   const out: string[] = [];
-  const pass = (ok: (b: number) => boolean) => {
+  for (const g of gradeOrder(settings.grade)) {
     for (const w of atlas.words) {
-      if (out.length >= count) return;
-      if (!ok(w.band) || p.cards[w.id] || out.includes(w.id)) continue;
+      if (out.length >= count) return out;
+      if (w.grade !== g || p.cards[w.id]) continue;
       out.push(w.id);
     }
-  };
-  // Lower bands are prerequisites: a grade-5 beginner still meets "cat" before "kangaroo".
-  pass((b) => b <= band);
-  if (out.length < count) pass(() => true);
+  }
   return out;
 }
 
@@ -67,19 +75,22 @@ export function distractors(atlas: Atlas, ref: WordRef, kind: QuizKind, seed: nu
   const scored: [number, WordRef][] = [];
   for (const w of atlas.words) {
     if (w.id === ref.id || normalize(w.word).toLowerCase() === target) continue;
-    if (w.emoji === ref.emoji || w.zh === ref.zh) continue;
+    if ((ref.emoji && w.emoji === ref.emoji) || (ref.wa && w.wa === ref.wa) || w.zh === ref.zh) continue;
     let score = hashSeed(w.id + seed) % 100;
     if (w.topic === ref.topic) score += 150;
-    if (Math.abs(w.band - ref.band) === 0) score += 40;
+    if (w.grade === ref.grade) score += 40;
+    else if (w.band === ref.band) score += 20;
+    // Picture questions read better when every option has a real picture (or none has).
+    if (kind !== "meaning" && pictured(w) === pictured(ref)) score += 60;
     if (kind === "picture" && w.word[0]?.toLowerCase() === target[0]) score += 30;
     scored.push([score, w]);
   }
   scored.sort((a, b) => b[0] - a[0]);
-  const seen = new Set<string>([ref.emoji, ref.zh]);
+  const seen = new Set<string>([ref.emoji, ref.zh].filter(Boolean));
   const picks: string[] = [];
   for (const [, w] of scored) {
-    if (seen.has(w.emoji) || seen.has(w.zh)) continue;
-    seen.add(w.emoji);
+    if ((w.emoji && seen.has(w.emoji)) || seen.has(w.zh)) continue;
+    if (w.emoji) seen.add(w.emoji);
     seen.add(w.zh);
     picks.push(w.id);
     if (picks.length === 3) break;

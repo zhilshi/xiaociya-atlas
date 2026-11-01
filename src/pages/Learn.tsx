@@ -12,7 +12,9 @@ import { hashSeed, normalize, shuffle } from "../lib/text";
 import { advance, answer, gradeFor, sessionStats } from "../store/session";
 import { store, useStore, type ActiveSession, type QuizKind, type Step } from "../store/store";
 import { Plant } from "../ui/Plant";
-import { say, SpeakButton } from "../ui/SpeakButton";
+import { pictured } from "../lib/media";
+import { sayWord, SpeakButton } from "../ui/SpeakButton";
+import { WordPic } from "../ui/WordPic";
 
 export function Learn() {
   const session = useStore((s) => s.progress.session);
@@ -31,7 +33,7 @@ function continueFrom(atlas: ReturnType<typeof useAtlas>, started: number) {
   const next = s?.steps[s.index + 1];
   if (next && settings.autoplay && (next.kind === "intro" || next.kind === "listen")) {
     const w = atlas.byId.get(next.id);
-    if (w) void say(w.word, settings.accent);
+    if (w) void sayWord(w, settings.accent);
   }
   cue("tap", settings.sfx);
   advance((performance.now() - started) / 1000);
@@ -70,13 +72,13 @@ function Intro({ step }: { step: Step }) {
       <p className="stage-label">🌱 新种子</p>
       <div className="intro-card">
         <div className={`word-pic tint-${topic.color}`} aria-hidden="true">
-          {w.emoji}
+          <WordPic w={w} />
         </div>
         <div className="word-head">
           <h2 className="word-en" lang="en">
             {w.word}
           </h2>
-          <SpeakButton word={w.word} big />
+          <SpeakButton w={w} big />
         </div>
         <p className="word-zh">{w.zh}</p>
       </div>
@@ -112,7 +114,7 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
     answer(atlas, step, correct, gradeFor(step.kind, correct, ms, hinted, cfg), value);
     cue(correct ? "correct" : "wrong", settings.sfx);
     if (correct) {
-      void say(w.word, settings.accent);
+      void sayWord(w, settings.accent);
       const r = el?.getBoundingClientRect();
       if (r) burst(r.left + r.width / 2, r.top + r.height / 2);
     }
@@ -122,14 +124,16 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
     <div className={`quiz quiz-${step.kind}`}>
       <p className="stage-label">{step.retry ? "🔁 再试一次" : PROMPT[step.kind]}</p>
       <div className="quiz-prompt">
-        {step.kind === "listen" && <SpeakButton word={w.word} big label="再听一遍" />}
+        {step.kind === "listen" && <SpeakButton w={w} big label="再听一遍" />}
         {(step.kind === "picture" || step.kind === "spell") && (
           <>
-            <div className="quiz-pic" aria-hidden="true">
-              {w.emoji}
-            </div>
+            {pictured(w) && (
+              <div className="quiz-pic" aria-hidden="true">
+                <WordPic w={w} size="md" />
+              </div>
+            )}
             <p className="quiz-zh">{w.zh}</p>
-            {step.kind === "spell" && <SpeakButton word={w.word} label="听发音" />}
+            {step.kind === "spell" && <SpeakButton w={w} label="听发音" />}
           </>
         )}
         {step.kind === "meaning" && (
@@ -137,7 +141,7 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
             <h2 className="word-en" lang="en">
               {w.word}
             </h2>
-            <SpeakButton word={w.word} />
+            <SpeakButton w={w} />
           </div>
         )}
       </div>
@@ -154,12 +158,12 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
             const state = pending ? (o.id === w.id ? "is-right" : o.id === pending.value ? "is-wrong" : "is-dim") : "";
             return (
               <button key={o.id} className={`option ${state}`} disabled={!!pending} onClick={(e) => submit(o.id, o.id === w.id, e.currentTarget)}>
-                {step.kind === "listen" && (
+                {step.kind === "listen" && pictured(o) && (
                   <span className="option-pic" aria-label={cfg.band === 1 ? o.zh : undefined}>
-                    {o.emoji}
+                    <WordPic w={o} size="sm" />
                   </span>
                 )}
-                {step.kind === "listen" && cfg.band > 1 && <span className="option-zh">{o.zh}</span>}
+                {step.kind === "listen" && (cfg.band > 1 || !pictured(o)) && <span className={pictured(o) ? "option-zh" : "option-zhbig"}>{o.zh}</span>}
                 {step.kind === "picture" && (
                   <span className="option-en" lang="en">
                     {o.word}
@@ -177,7 +181,7 @@ function Quiz({ step, session }: { step: Step & { kind: QuizKind }; session: Act
           <div className="feedback-text">
             <b>{pending.correct ? "太棒了！🎉" : "没关系，记住它 👇"}</b>
             <span>
-              <span aria-hidden="true">{w.emoji}</span> <span lang="en">{w.word}</span> · {w.zh}
+              {w.emoji && <span aria-hidden="true">{w.emoji}</span>} <span lang="en">{w.word}</span> · {w.zh}
             </span>
           </div>
           <button className="btn btn-primary btn-xl btn-block" autoFocus onClick={() => continueFrom(atlas, t0.current)}>

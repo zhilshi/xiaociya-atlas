@@ -3,7 +3,9 @@ import { atlas } from "../atlas/data";
 import { bedSummary, STAGE_INFO, STAGES } from "../lib/garden";
 import { GRADE_LABEL } from "../lib/grade";
 import { go, openWord } from "../lib/router";
-import { say } from "../ui/SpeakButton";
+import { pictured } from "../lib/media";
+import { sayWord } from "../ui/SpeakButton";
+import { WordPic } from "../ui/WordPic";
 import { weekStickers } from "../lib/stickers";
 import { buildSession, newToday, todayPlan } from "../store/session";
 import { store, useStore } from "../store/store";
@@ -17,7 +19,7 @@ export function startSession(ids?: string[]) {
   const first = sess.steps[0];
   if (settings.autoplay && (first.kind === "intro" || first.kind === "listen")) {
     const w = atlas.byId.get(first.id);
-    if (w) void say(w.word, settings.accent);
+    if (w) void sayWord(w, settings.accent);
   }
   go({ page: "learn" });
   return true;
@@ -51,7 +53,10 @@ export function Today() {
       now,
     ).complete,
   );
-  const wod = atlas.words[Math.floor(now / 86400000) % atlas.words.length];
+  // Word of the day: a pictured word from the learner's own grade.
+  const pool = atlas.words.filter((w) => w.grade === (settings.grade || 1) && pictured(w));
+  const wodPool = pool.length ? pool : atlas.words;
+  const wod = wodPool[Math.floor(now / 86400000) % wodPool.length];
 
   return (
     <div className="page today">
@@ -146,7 +151,7 @@ export function Today() {
       <section className="card wod" aria-label="每日一词">
         <button className="wod-btn" onClick={() => openWord(wod.id)}>
           <span className="wod-pic" aria-hidden="true">
-            {wod.emoji}
+            <WordPic w={wod} size="sm" />
           </span>
           <span className="wod-text">
             <small>每日一词</small>

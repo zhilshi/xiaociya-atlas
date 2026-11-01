@@ -9,7 +9,9 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --import tsx --test src/**/*.test.ts",
     "screenshots": "node scripts/screenshots.mjs",
-    "format": "prettier --write src vite.config.ts package.json tsconfig.json"
+    "format": "prettier --write src vite.config.ts package.json tsconfig.json",
+    "data": "tsx scripts/build-lexicon.ts",
+    "data:wa": "python3 scripts/import_word_atlas.py && tsx scripts/build-lexicon.ts"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

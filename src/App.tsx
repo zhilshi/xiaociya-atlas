@@ -17,7 +17,7 @@ import { Sheet } from "./ui/Sheet";
 import { Toasts } from "./ui/Toast";
 import { WordCard } from "./ui/WordCard";
 
-store.useDataset(atlas.id);
+store.useDataset({ id: atlas.id, aliases: atlas.aliases, has: (id) => atlas.byId.has(id) });
 
 const NAV: { page: Route["page"]; label: string; icon: typeof Sun }[] = [
   { page: "today", label: "今天", icon: Sun },

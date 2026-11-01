@@ -15,7 +15,7 @@ export type Stage = "seed" | "sprout" | "leaf" | "bloom" | "fruit";
 export const STAGES: Stage[] = ["seed", "sprout", "leaf", "bloom", "fruit"];
 
 export const STAGE_INFO: Record<Stage, { zh: string; emoji: string; tip: string }> = {
-  seed: { zh: "种子", emoji: "🌰", tip: "还没学" },
+  seed: { zh: "种子", emoji: "", tip: "还没学" }, // drawn as an SVG seed mound (ui/Plant.tsx)
   sprout: { zh: "发芽", emoji: "🌱", tip: "刚认识" },
   leaf: { zh: "长叶", emoji: "🌿", tip: "记住一点了" },
   bloom: { zh: "开花", emoji: "🌷", tip: "记得很牢" },
@@ -51,4 +51,41 @@ export function bedSummary(ids: string[], cards: Record<string, CardState>, now:
     if (p.thirsty) thirsty++;
   }
   return { counts, thirsty, total: ids.length, complete: ids.length > 0 && counts.fruit === ids.length };
+}
+
+/** Which grade the garden shows: 0 = the learner's grade, 1–6 = that grade, 9 = all grades. */
+export function gardenGradeOf(filter: number, myGrade: number): number {
+  if (filter === 9) return 0;
+  if (filter >= 1 && filter <= 6) return filter;
+  return myGrade >= 1 && myGrade <= 6 ? myGrade : 0;
+}
+
+export interface BedGroup<T> {
+  growing: T[];
+  unstarted: T[];
+  complete: T[];
+}
+
+/**
+ * Flower beds for one grade (0 = all): one per topic that has words in that grade, split
+ * into growing (shown as big cards), not started and fully grown (collapsed lists).
+ */
+export function gardenBeds<W extends { id: string; topicId: string; grade: number }, T extends { id: string }>(
+  topics: T[],
+  words: W[],
+  grade: number,
+  cards: Record<string, CardState>,
+  now: number,
+): BedGroup<{ topic: T; ids: string[]; sum: ReturnType<typeof bedSummary> }> {
+  const out: BedGroup<{ topic: T; ids: string[]; sum: ReturnType<typeof bedSummary> }> = { growing: [], unstarted: [], complete: [] };
+  for (const topic of topics) {
+    const ids = words.filter((w) => w.topicId === topic.id && (!grade || w.grade === grade)).map((w) => w.id);
+    if (!ids.length) continue;
+    const sum = bedSummary(ids, cards, now);
+    const bed = { topic, ids, sum };
+    if (sum.complete) out.complete.push(bed);
+    else if (sum.counts.seed === sum.total) out.unstarted.push(bed);
+    else out.growing.push(bed);
+  }
+  return out;
 }

@@ -13,6 +13,8 @@ export type SpeakOptions = {
   voiceName?: string;
   pitch?: number;
   cancelPrevious?: boolean;
+  /** Recorded pronunciation (Word Atlas mp3) tried before every other voice. */
+  src?: string;
 };
 export type SpeakResult = {
   ok: boolean;
@@ -181,8 +183,8 @@ function stopAudio() {
   currentAudio = null;
 }
 
-async function playNetworkAudio(text: string, lang: string, accent: 'us' | 'uk'): Promise<boolean> {
-  const urls = audioUrls(text, lang, accent);
+async function playNetworkAudio(text: string, lang: string, accent: 'us' | 'uk', only?: string[]): Promise<boolean> {
+  const urls = only ?? audioUrls(text, lang, accent);
   const custom = getEnv().playAudio;
   if (custom) {
     for (const url of urls) {
@@ -280,7 +282,13 @@ export async function speak(text: string, opts: SpeakOptions = {}): Promise<Spea
   const lang = opts.lang ?? (accent === 'uk' ? 'en-GB' : 'en-US');
   unlockAudio();
 
-  // 同步优先：已有 voices 立刻用，不等
+  // 1. 自带录音（Word Atlas，离线缓存后也能播）
+  if (opts.src) {
+    getEnv().synth?.cancel();
+    if (await playNetworkAudio(text, lang, accent, [opts.src])) return { ok: true, via: 'audio', voice: 'recording' };
+  }
+
+  // 2. 同步优先：已有 voices 立刻用，不等
   if (synth && Utterance) {
     let voices = synth.getVoices();
     if (!voices.length) voices = await loadVoices(150);

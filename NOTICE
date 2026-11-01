@@ -1,18 +1,42 @@
 小词芽 WordSprout
 Copyright (c) 2026 小词芽 contributors
 
+CODE
 This product is based on Word Atlas (词光) — https://github.com/designfuchen/word-atlas
 Copyright (c) 2026 Word Atlas contributors, licensed under the MIT License (see LICENSE).
-
 Reused and adapted from Word Atlas: project structure (React + Vite + hash router),
 the localStorage store and backup format, the FSRS scheduling wrapper (src/store/srs.ts),
-the session/queue logic (src/store/session.ts), the Sheet/Toast UI primitives and the
-celebration burst (src/lib/burst.ts). The IELTS word list, audio and dark theme were removed.
+the session/queue logic (src/store/session.ts), the Sheet/Toast UI primitives, the
+celebration burst (src/lib/burst.ts), the service worker media cache and the offline download.
+
+CONTENT — Word Atlas contributors — CC BY 4.0
+Files under public/wa/ (illustrations, UK/US pronunciation recordings, example sentences,
+collocations, word families, synonyms/antonyms, tips) and data/word-atlas-manifest.json come
+from Word Atlas, upstream commit 19a9bd88:
+  Word Atlas contributors — CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Modifications by 小词芽: only the 1,399 entries matching 小词芽's grade 1–6 word list were kept;
+images re-used as 256px WebP thumbnails; example-sentence audio was not copied; examples and
+collocations were re-filtered by grade (a "core" kid tier and a separate "ext"/进阶 tier);
+content unsuitable for children (violence, adult themes, substances, crime) was removed;
+44 entries whose upstream sense differs from the school meaning (e.g. bear = 忍受) keep no
+picture and only advanced content. Produced by scripts/import_word_atlas.py.
+These modifications are not endorsed by the Word Atlas contributors.
+
+WORD LIST (data/wordlist-v2.csv, see data/ATTRIBUTION.md)
+- CEFR-J Wordlist Version 1.5. 『CEFR-J Wordlist Version 1.5』 東京外国語大学投野由紀夫研究室.
+  http://www.cefr-j.org/download.html
+- NGSL 1.2 (Browne, Culligan & Phillips 2013) and FrequencyWords (Hermit Dave, OpenSubtitles 2018),
+  CC BY-SA 4.0 — used only for the ngsl_rank / freq_rank_subtitles columns of the CSV in data/.
+  Those columns are redistributed in this repository under CC BY-SA 4.0 with this attribution;
+  they are NOT bundled into the app (src/data/lexicon-v2.json ships only en/zh/pos/grade/topic/picture).
+- ECDICT (skywind3000), MIT — Chinese glosses where zh_source=ECDICT(MIT).
+- Dolch sight words — public domain.
+- Cambridge YLE wordlists (© UCLES 2018), 《义务教育英语课程标准（2022年版）》 and 人教版 PEP 词表
+  were used as grade-level signals only; their lists are not reproduced.
 
 Third-party:
 - ts-fsrs (MIT) — spaced-repetition scheduler.
 - lucide-react (ISC) — icons.
-- Emoji artwork: Google Noto Emoji (Apache-2.0), rendered by the device's emoji font.
-- Word list (src/data/lexicon.json): 395 primary-school words curated for 小词芽.
-- Pronunciation: the device's speech synthesis voice, falling back to online TTS
-  (Youdao dictvoice, then Google Translate TTS) streamed at play time; no audio is bundled.
+- Emoji artwork: rendered by the device's emoji font.
+- Pronunciation fallback when no Word Atlas recording exists: the device's speech synthesis
+  voice, then online TTS (Youdao dictvoice, then Google Translate TTS) streamed at play time.

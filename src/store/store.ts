@@ -2,6 +2,7 @@ import { useSyncExternalStore } from "react";
 import type { Accent } from "../atlas/types";
 import type { CardState, Grade } from "./srs";
 import { gradeConfig, isGrade, type SchoolGrade } from "../lib/grade";
+import { LEGACY_DATASETS, migrateProgress, type MigrationTarget } from "./migrate";
 
 export type QuizKind = "meaning" | "picture" | "listen" | "spell";
 export type Step = { id: string; kind: "intro" } | { id: string; kind: QuizKind; retry?: boolean; options?: string[] };
@@ -49,7 +50,7 @@ export interface Progress {
 
 export interface Settings {
   /** Settings schema version; older or foreign settings are migrated by sanitizeSettings. */
-  schema: 3;
+  schema: 4;
   /** School grade 1–6; 0 until a parent picks one during onboarding. */
   grade: SchoolGrade | 0;
   accent: Accent;
@@ -58,9 +59,15 @@ export interface Settings {
   retention: number;
   sfx: boolean;
   onboarded: boolean;
+  /** Show the 进阶扩展 tier (advanced Word Atlas examples, word family, tips) on word cards. */
+  advanced: boolean;
+  /** Garden filter: 0 = the learner's grade, 1–6 = one grade, 9 = every grade. */
+  gardenGrade: number;
 }
 
-export const SETTINGS_SCHEMA = 3 as const;
+export const SETTINGS_SCHEMA = 4 as const;
+/** Advanced content defaults on for grades 5–6, off for 1–4 (parents can change it in 我的). */
+export const advancedDefault = (grade: number) => grade >= 5;
 
 export const defaultSettings: Settings = {
   schema: SETTINGS_SCHEMA,
@@ -71,11 +78,13 @@ export const defaultSettings: Settings = {
   retention: 0.9,
   sfx: true,
   onboarded: false,
+  advanced: false,
+  gardenGrade: 0,
 };
 
 /** Settings after a grade is picked: the daily goal follows the grade (5 / 8 / 10). */
 export function settingsForGrade(s: Settings, grade: SchoolGrade): Settings {
-  return { ...s, grade, dailyNew: gradeConfig(grade).dailyNew };
+  return { ...s, grade, dailyNew: gradeConfig(grade).dailyNew, advanced: advancedDefault(grade), gardenGrade: 0 };
 }
 
 export const emptyProgress = (datasetId: string): Progress => ({
@@ -167,7 +176,11 @@ export function sanitizeSettings(v: unknown): Settings {
   if (isGrade(v.grade)) {
     s.grade = v.grade;
     s.dailyNew = gradeConfig(v.grade).dailyNew;
+    s.advanced = advancedDefault(v.grade);
   }
+  // Schema 3 → 4: `advanced` and `gardenGrade` are new; keep explicit choices from schema 4.
+  if (v.schema === 4 && typeof v.advanced === "boolean") s.advanced = v.advanced;
+  if ([0, 1, 2, 3, 4, 5, 6, 9].includes(v.gardenGrade as number)) s.gardenGrade = v.gardenGrade as number;
   if (num(v.dailyNew, 1, 30)) s.dailyNew = Math.round(v.dailyNew as number);
   // Onboarding only counts as done once a valid grade exists (older schemas had no grade).
   s.onboarded = v.onboarded === true && s.grade !== 0;
@@ -183,16 +196,18 @@ interface State {
 }
 
 let state: State = {
-  progress: emptyProgress("wordsprout-v1"),
+  progress: emptyProgress("wordsprout-v2"),
   settings: sanitizeSettings(read(SETTINGS_KEY)),
   saveError: false,
 };
 const listeners = new Set<() => void>();
-let saveTimer: number | undefined;
+let saveTimer: ReturnType<typeof setTimeout> | undefined;
 /** Only write when this tab changed something, so idle tabs never clobber newer data. */
 let dirty = false;
 /** Progress is written only after it has been read from storage for this dataset. */
 let loadedId: string | null = null;
+/** Current lexicon (for migrating imported backups from older lexicons). */
+let target_: MigrationTarget | null = null;
 
 function emit() {
   listeners.forEach((l) => l());
@@ -200,12 +215,12 @@ function emit() {
 
 function scheduleSave() {
   dirty = true;
-  window.clearTimeout(saveTimer);
-  saveTimer = window.setTimeout(flush, 250);
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(flush, 250);
 }
 
 export function flush() {
-  window.clearTimeout(saveTimer);
+  clearTimeout(saveTimer);
   if (!dirty) return;
   dirty = false;
   const progressOk = loadedId !== state.progress.datasetId || write(progressKey(state.progress.datasetId), state.progress);
@@ -240,11 +255,27 @@ export const store = {
     listeners.add(l);
     return () => listeners.delete(l);
   },
-  useDataset(datasetId: string) {
+  /** Load progress for a lexicon, migrating older lexicon progress the first time. */
+  useDataset(target: MigrationTarget) {
     flush();
-    state = { ...state, progress: sanitizeProgress(read(progressKey(datasetId)), datasetId) };
+    const datasetId = target.id;
+    const stored = read(progressKey(datasetId));
+    let progress = sanitizeProgress(stored, datasetId);
+    let migrated = false;
+    if (stored === null) {
+      for (const old of LEGACY_DATASETS) {
+        const raw = read(progressKey(old));
+        if (raw === null) continue;
+        progress = migrateProgress(sanitizeProgress(raw, old), target);
+        migrated = true;
+        break;
+      }
+    }
+    state = { ...state, progress };
     loadedId = datasetId;
+    target_ = target;
     emit();
+    if (migrated) scheduleSave();
   },
   progress(fn: (p: Progress) => Progress) {
     state = { ...state, progress: fn(state.progress) };
@@ -303,8 +334,12 @@ export function importBackup(text: string): { ok: true; cards: number } | { ok: 
   if (!isObj(data) || data.app !== "wordsprout" || data.version !== 2 || !isObj(data.progress))
     return { ok: false, error: "这不是小词芽的学习备份。" };
   const id = state.progress.datasetId;
-  if (data.progress.datasetId !== id) return { ok: false, error: "备份来自另一个词库，请先切换到对应词库。" };
-  const progress = sanitizeProgress({ ...data.progress, session: null }, id);
+  const from = data.progress.datasetId;
+  let progress: Progress;
+  if (from === id) progress = sanitizeProgress({ ...data.progress, session: null }, id);
+  else if (typeof from === "string" && LEGACY_DATASETS.includes(from) && target_?.id === id)
+    progress = migrateProgress(sanitizeProgress(data.progress, from), target_);
+  else return { ok: false, error: "备份来自另一个词库，请先切换到对应词库。" };
   state = { ...state, progress, settings: (() => { const s = sanitizeSettings(data.settings); return { ...s, onboarded: s.grade !== 0 }; })() };
   emit();
   markDirty();

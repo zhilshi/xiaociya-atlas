@@ -66,3 +66,19 @@ test("all sources failing reports no-english-voice", async () => {
   assert.equal(r.ok, false);
   assert.equal(r.reason, "no-english-voice");
 });
+
+test("a recorded mp3 (Word Atlas) plays before device voices and Youdao", async () => {
+  const e = env([voice("Samantha", "en-US")]);
+  const r = await speak("apple", { accent: "us", src: "/wa/us/apple.mp3" });
+  assert.equal(r.ok, true);
+  assert.deepEqual(e.played, ["/wa/us/apple.mp3"]);
+  assert.deepEqual(e.spoken, []);
+});
+
+test("if the recording fails, the old voice chain still speaks", async () => {
+  const e = env([voice("Samantha", "en-US")], ["/wa/"]);
+  const r = await speak("apple", { accent: "us", src: "/wa/us/apple.mp3" });
+  assert.equal(r.ok, true);
+  assert.equal(e.played[0], "/wa/us/apple.mp3");
+  assert.deepEqual(e.spoken, ["apple"]);
+});

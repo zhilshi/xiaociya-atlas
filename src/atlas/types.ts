@@ -11,17 +11,29 @@ export interface Topic {
   color: "mint" | "cream" | "peach" | "sky" | "lavender";
 }
 
-/** One word in the 小词芽 lexicon (original content, emoji image for now). */
+/** School grade 1–6 (0 = not chosen yet). */
+export type Grade = 1 | 2 | 3 | 4 | 5 | 6;
+
+/** One word in the 小词芽 lexicon (wordlist-v2, grades 1–6). */
 export interface WordRef {
   id: string;
   word: string;
   zh: string;
+  /** Picture emoji; "" when no honest picture exists (UI shows a letter + 中文 gloss card). */
   emoji: string;
+  /** Big text shown instead of a picture, e.g. "30" or "1st" for number words. */
+  glyph: string;
+  pos: string;
+  /** Word Atlas file stem ("" = no upstream match) and WA_* flags (img/audio/core/ext). */
+  wa: string;
+  waFlags: number;
+  /** School grade the word is introduced in (1–6). */
+  grade: Grade;
   /** Index into Atlas.topics. */
   topic: number;
   topicId: string;
   band: Band;
-  /** Position in the learning path (band, then topic, then lexicon order). */
+  /** Position in the learning path (grade, then topic, then wordlist order). */
   order: number;
 }
 
@@ -32,4 +44,6 @@ export interface Atlas {
   topics: Topic[];
   words: WordRef[];
   byId: Map<string, WordRef>;
+  /** Retired v1 ids → current id (used by the progress migration). */
+  aliases: Record<string, string>;
 }

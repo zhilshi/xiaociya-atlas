@@ -7,15 +7,28 @@ const BASE = process.argv[2] || "http://localhost:5188/";
 const OUT = new URL("../screenshots/", import.meta.url).pathname;
 mkdirSync(OUT, { recursive: true });
 
-const lexicon = JSON.parse(readFileSync(new URL("../src/data/lexicon.json", import.meta.url), "utf8"));
+const lexicon = JSON.parse(readFileSync(new URL("../src/data/lexicon-v2.json", import.meta.url), "utf8"));
+// Packed rows: [id, en, zh, pos, grade, topicIndex, emoji, glyph, waStem, waFlags]
+const words = lexicon.words.map(([id, en, , , grade, t, , , , flags]) => ({ id, en, grade, topic: lexicon.topics[t].id, flags }));
+const GRADE = 3;
+// Demo garden: grade-3 nature/weather/places beds partly grown, plus some grade 1–2 words to review.
+const DEMO_TOPICS = ["nature", "weather", "places", "family", "feelings"];
+const demoIds = [
+  ...DEMO_TOPICS.flatMap((t) => words.filter((w) => w.grade === GRADE && w.topic === t).slice(0, 7)),
+  ...words.filter((w) => w.grade < GRADE && DEMO_TOPICS.includes(w.topic)).slice(0, 14),
+].map((w) => w.id);
+const bedCount = (t) => demoIds.filter((id) => words.find((w) => w.id === id).topic === t).length;
+const BED = bedCount("nature") ? "nature" : DEMO_TOPICS.slice().sort((a, b) => bedCount(b) - bedCount(a))[0];
+// Word card: a grade-3 word in that bed with a Word Atlas picture and kid examples.
+const CARD = words.find((w) => w.topic === BED && w.grade === GRADE && (w.flags & 5) === 5) ?? words.find((w) => w.topic === BED);
 const DAY = 86400000;
 
 /** Demo progress: a few animal and fruit words at every growth stage, some due, five study days. */
 function demoProgress(now) {
   const cards = {};
-  const ids = lexicon.words.filter((w) => w.topicId === "animals" || w.topicId === "fruits").map((w) => w.id);
+  const ids = demoIds;
   const stab = [0.5, 3, 5, 9, 15, 25, 30, 40];
-  ids.slice(0, 40).forEach((id, i) => {
+  ids.forEach((id, i) => {
     const s = stab[i % stab.length];
     const st = i % 9 === 0 ? 1 : 2;
     const due = i % 5 === 0 ? now - DAY : now + s * DAY;
@@ -27,7 +40,7 @@ function demoProgress(now) {
     const k = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
     days[k] = { n: 3, r: 8, c: 7, t: 300 };
   }
-  return { version: 2, datasetId: "wordsprout-v1", cards, bookmarks: [], days, typing: [], session: null, mistakes: [] };
+  return { version: 2, datasetId: "wordsprout-v2", cards, bookmarks: [], days, typing: [], session: null, mistakes: [] };
 }
 
 // CHROMIUM_PATH lets you reuse an already-installed Chromium instead of `npx playwright install`.
@@ -57,7 +70,7 @@ await page.waitForTimeout(400);
 await page.close();
 await ctx.addInitScript((p) => {
   if (!localStorage.getItem("__demo_seeded")) {
-    localStorage.setItem("wordsprout:progress:wordsprout-v1", p);
+    localStorage.setItem("wordsprout:progress:wordsprout-v2", p);
     localStorage.setItem("__demo_seeded", "1");
   }
 }, JSON.stringify(demoProgress(Date.now())));
@@ -67,14 +80,18 @@ await shot("2-today");
 
 await page.goto(BASE + "#/garden");
 await shot("3-garden");
-await page.goto(BASE + "#/garden?bed=animals");
+await page.goto(BASE + `#/garden?bed=${BED}`);
 await shot("4-garden-bed");
-await page.goto(BASE + "#/garden?bed=animals&w=animals.panda");
+await page.goto(BASE + `#/garden?bed=${BED}&w=${CARD.id}`);
+await page.waitForSelector(".word-extras, .word-card", { timeout: 5000 });
+await page.waitForTimeout(800); // lazy picture + example file
 await shot("5-word-card");
+console.log("bed", BED, "card", CARD.id);
 
 await page.goto(BASE + "#/");
 await page.getByRole("button", { name: /开始今天的学习|继续学习/ }).click();
 for (let i = 0; i < 20 && (await page.getByRole("button", { name: /认识了/ }).count()); i++) await page.getByRole("button", { name: /认识了/ }).click();
+await page.waitForTimeout(600);
 await shot("6-practice-question");
 const first = page.locator(".option").first();
 if (await first.count()) {
