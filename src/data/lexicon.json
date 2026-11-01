@@ -1,0 +1,5637 @@
+{
+ "version": 1,
+ "topics": [
+  {
+   "id": "animals",
+   "nameEn": "Animals",
+   "nameZh": "动物",
+   "icon": "🐼",
+   "color": "mint",
+   "order": 1,
+   "wordIds": [
+    "animals.dog",
+    "animals.cat",
+    "animals.rabbit",
+    "animals.mouse",
+    "animals.hamster",
+    "animals.pig",
+    "animals.cow",
+    "animals.horse",
+    "animals.sheep",
+    "animals.goat",
+    "animals.chicken",
+    "animals.chick",
+    "animals.duck",
+    "animals.goose",
+    "animals.turkey",
+    "animals.donkey",
+    "animals.camel",
+    "animals.llama",
+    "animals.lion",
+    "animals.tiger",
+    "animals.leopard",
+    "animals.elephant",
+    "animals.giraffe",
+    "animals.zebra",
+    "animals.monkey",
+    "animals.gorilla",
+    "animals.panda",
+    "animals.bear",
+    "animals.polar-bear",
+    "animals.koala",
+    "animals.kangaroo",
+    "animals.fox",
+    "animals.wolf",
+    "animals.deer",
+    "animals.hippo",
+    "animals.rhino",
+    "animals.squirrel",
+    "animals.hedgehog",
+    "animals.bat",
+    "animals.raccoon",
+    "animals.skunk",
+    "animals.otter",
+    "animals.sloth",
+    "animals.beaver",
+    "animals.bison",
+    "animals.bird",
+    "animals.eagle",
+    "animals.owl",
+    "animals.parrot",
+    "animals.peacock",
+    "animals.flamingo",
+    "animals.swan",
+    "animals.penguin",
+    "animals.dove",
+    "animals.fish",
+    "animals.tropical-fish",
+    "animals.shark",
+    "animals.whale",
+    "animals.dolphin",
+    "animals.seal",
+    "animals.octopus",
+    "animals.crab",
+    "animals.lobster",
+    "animals.shrimp",
+    "animals.squid",
+    "animals.jellyfish",
+    "animals.turtle",
+    "animals.frog",
+    "animals.snake",
+    "animals.lizard",
+    "animals.crocodile",
+    "animals.dinosaur",
+    "animals.butterfly",
+    "animals.bee",
+    "animals.ant",
+    "animals.ladybird",
+    "animals.snail",
+    "animals.spider",
+    "animals.caterpillar",
+    "animals.beetle",
+    "animals.cricket",
+    "animals.mosquito",
+    "animals.worm",
+    "animals.fly",
+    "animals.unicorn",
+    "animals.dragon",
+    "animals.puppy",
+    "animals.kitten",
+    "animals.bunny",
+    "animals.piglet"
+   ]
+  },
+  {
+   "id": "fruits",
+   "nameEn": "Fruits",
+   "nameZh": "水果",
+   "icon": "🍓",
+   "color": "peach",
+   "order": 2,
+   "wordIds": [
+    "fruits.apple",
+    "fruits.green-apple",
+    "fruits.pear",
+    "fruits.orange",
+    "fruits.lemon",
+    "fruits.banana",
+    "fruits.watermelon",
+    "fruits.grapes",
+    "fruits.strawberry",
+    "fruits.blueberry",
+    "fruits.melon",
+    "fruits.cherry",
+    "fruits.peach",
+    "fruits.mango",
+    "fruits.pineapple",
+    "fruits.coconut",
+    "fruits.kiwi",
+    "fruits.tomato",
+    "fruits.avocado",
+    "fruits.olive",
+    "fruits.chestnut"
+   ]
+  },
+  {
+   "id": "numbers",
+   "nameEn": "Numbers",
+   "nameZh": "数字",
+   "icon": "🔢",
+   "color": "sky",
+   "order": 3,
+   "wordIds": [
+    "numbers.one",
+    "numbers.two",
+    "numbers.three",
+    "numbers.four",
+    "numbers.five",
+    "numbers.six",
+    "numbers.seven",
+    "numbers.eight",
+    "numbers.nine",
+    "numbers.ten",
+    "numbers.eleven",
+    "numbers.twelve",
+    "numbers.thirteen",
+    "numbers.fourteen",
+    "numbers.fifteen",
+    "numbers.sixteen",
+    "numbers.seventeen",
+    "numbers.eighteen",
+    "numbers.nineteen",
+    "numbers.twenty"
+   ]
+  },
+  {
+   "id": "colors",
+   "nameEn": "Colors",
+   "nameZh": "颜色",
+   "icon": "🎨",
+   "color": "lavender",
+   "order": 4,
+   "wordIds": [
+    "colors.red",
+    "colors.orange",
+    "colors.yellow",
+    "colors.green",
+    "colors.blue",
+    "colors.purple",
+    "colors.brown",
+    "colors.black",
+    "colors.white",
+    "colors.pink",
+    "colors.grey",
+    "colors.light-blue",
+    "colors.gold",
+    "colors.silver",
+    "colors.rainbow"
+   ]
+  },
+  {
+   "id": "body",
+   "nameEn": "My Body",
+   "nameZh": "身体",
+   "icon": "🖐️",
+   "color": "cream",
+   "order": 5,
+   "wordIds": [
+    "body.head",
+    "body.face",
+    "body.hair",
+    "body.eye",
+    "body.eyes",
+    "body.ear",
+    "body.nose",
+    "body.mouth",
+    "body.tongue",
+    "body.tooth",
+    "body.lips",
+    "body.hand",
+    "body.finger",
+    "body.thumb",
+    "body.fist",
+    "body.arm",
+    "body.leg",
+    "body.foot",
+    "body.brain",
+    "body.heart",
+    "body.lungs",
+    "body.bone",
+    "body.nail",
+    "body.beard",
+    "body.body"
+   ]
+  },
+  {
+   "id": "food",
+   "nameEn": "Food & Drinks",
+   "nameZh": "食物饮品",
+   "icon": "🍔",
+   "color": "peach",
+   "order": 6,
+   "wordIds": [
+    "food.bread",
+    "food.rice",
+    "food.noodles",
+    "food.dumplings",
+    "food.egg",
+    "food.fried-egg",
+    "food.cheese",
+    "food.butter",
+    "food.meat",
+    "food.chicken-leg",
+    "food.bacon",
+    "food.steak",
+    "food.hamburger",
+    "food.hot-dog",
+    "food.pizza",
+    "food.sandwich",
+    "food.taco",
+    "food.french-fries",
+    "food.popcorn",
+    "food.salad",
+    "food.soup",
+    "food.spaghetti",
+    "food.sushi",
+    "food.rice-ball",
+    "food.curry",
+    "food.mooncake",
+    "food.pancakes",
+    "food.waffle",
+    "food.bagel",
+    "food.croissant",
+    "food.pretzel",
+    "food.cake",
+    "food.birthday-cake",
+    "food.cupcake",
+    "food.pie",
+    "food.cookie",
+    "food.chocolate",
+    "food.candy",
+    "food.lollipop",
+    "food.ice-cream",
+    "food.doughnut",
+    "food.honey",
+    "food.salt",
+    "food.carrot",
+    "food.corn",
+    "food.potato",
+    "food.sweet-potato",
+    "food.broccoli",
+    "food.cucumber",
+    "food.pepper",
+    "food.green-pepper",
+    "food.eggplant",
+    "food.mushroom",
+    "food.onion",
+    "food.garlic",
+    "food.lettuce",
+    "food.beans",
+    "food.ginger",
+    "food.milk",
+    "food.water",
+    "food.juice",
+    "food.tea",
+    "food.coffee",
+    "food.cola",
+    "food.bubble-tea",
+    "food.coconut-water",
+    "food.soft-ice-cream",
+    "food.ice",
+    "food.bowl",
+    "food.chopsticks",
+    "food.spoon",
+    "food.fork-and-knife",
+    "food.plate",
+    "food.lunch-box",
+    "food.oden",
+    "food.fortune-cookie",
+    "food.shaved-ice",
+    "food.custard",
+    "food.flatbread",
+    "food.falafel",
+    "food.shrimp-tempura"
+   ]
+  },
+  {
+   "id": "transport",
+   "nameEn": "Transport",
+   "nameZh": "交通工具",
+   "icon": "🚌",
+   "color": "sky",
+   "order": 7,
+   "wordIds": [
+    "transport.car",
+    "transport.bus",
+    "transport.taxi",
+    "transport.train",
+    "transport.high-speed-train",
+    "transport.subway",
+    "transport.tram",
+    "transport.monorail",
+    "transport.truck",
+    "transport.van",
+    "transport.jeep",
+    "transport.racing-car",
+    "transport.police-car",
+    "transport.ambulance",
+    "transport.fire-engine",
+    "transport.tractor",
+    "transport.bike",
+    "transport.motorbike",
+    "transport.scooter",
+    "transport.skateboard",
+    "transport.plane",
+    "transport.helicopter",
+    "transport.rocket",
+    "transport.flying-saucer",
+    "transport.parachute",
+    "transport.boat",
+    "transport.ship",
+    "transport.speedboat",
+    "transport.ferry",
+    "transport.canoe",
+    "transport.cable-car",
+    "transport.trolleybus",
+    "transport.sled",
+    "transport.wheelchair",
+    "transport.traffic-light",
+    "transport.stop-sign",
+    "transport.road",
+    "transport.station",
+    "transport.gas-station",
+    "transport.bus-stop",
+    "transport.tyre",
+    "transport.anchor"
+   ]
+  },
+  {
+   "id": "family",
+   "nameEn": "Family",
+   "nameZh": "家庭成员",
+   "icon": "👪",
+   "color": "peach",
+   "order": 8,
+   "wordIds": [
+    "family.family",
+    "family.father",
+    "family.mother",
+    "family.parents",
+    "family.grandfather",
+    "family.grandmother",
+    "family.grandparent",
+    "family.brother",
+    "family.sister",
+    "family.baby",
+    "family.child",
+    "family.uncle",
+    "family.aunt",
+    "family.cousin",
+    "family.husband",
+    "family.wife",
+    "family.twins",
+    "family.home",
+    "family.pet",
+    "family.love"
+   ]
+  },
+  {
+   "id": "calendar",
+   "nameEn": "Months & Days",
+   "nameZh": "月份和星期",
+   "icon": "📅",
+   "color": "lavender",
+   "order": 9,
+   "wordIds": [
+    "calendar.january",
+    "calendar.february",
+    "calendar.march",
+    "calendar.april",
+    "calendar.may",
+    "calendar.june",
+    "calendar.july",
+    "calendar.august",
+    "calendar.september",
+    "calendar.october",
+    "calendar.november",
+    "calendar.december",
+    "calendar.monday",
+    "calendar.tuesday",
+    "calendar.wednesday",
+    "calendar.thursday",
+    "calendar.friday",
+    "calendar.saturday",
+    "calendar.sunday",
+    "calendar.day",
+    "calendar.week",
+    "calendar.weekend",
+    "calendar.month",
+    "calendar.year",
+    "calendar.today",
+    "calendar.birthday"
+   ]
+  },
+  {
+   "id": "actions",
+   "nameEn": "Actions",
+   "nameZh": "动作",
+   "icon": "🏃",
+   "color": "mint",
+   "order": 10,
+   "wordIds": [
+    "actions.run",
+    "actions.walk",
+    "actions.jump",
+    "actions.swim",
+    "actions.dance",
+    "actions.sing",
+    "actions.read",
+    "actions.write",
+    "actions.draw",
+    "actions.eat",
+    "actions.drink",
+    "actions.sleep",
+    "actions.cry",
+    "actions.laugh",
+    "actions.smile",
+    "actions.climb",
+    "actions.ride",
+    "actions.fly",
+    "actions.kick",
+    "actions.throw",
+    "actions.catch",
+    "actions.clap",
+    "actions.wave",
+    "actions.cook",
+    "actions.wash",
+    "actions.brush",
+    "actions.play",
+    "actions.listen",
+    "actions.look",
+    "actions.think",
+    "actions.hug",
+    "actions.sit",
+    "actions.stand",
+    "actions.open",
+    "actions.close",
+    "actions.cut",
+    "actions.paint",
+    "actions.skate",
+    "actions.ski",
+    "actions.surf",
+    "actions.fish",
+    "actions.shop",
+    "actions.call",
+    "actions.count",
+    "actions.point",
+    "actions.lift",
+    "actions.bow",
+    "actions.kneel",
+    "actions.juggle",
+    "actions.row",
+    "actions.whisper",
+    "actions.yawn",
+    "actions.sneeze",
+    "actions.pray",
+    "actions.build"
+   ]
+  }
+ ],
+ "words": [
+  {
+   "id": "animals.dog",
+   "en": "dog",
+   "zh": "狗",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.cat",
+   "en": "cat",
+   "zh": "猫",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.rabbit",
+   "en": "rabbit",
+   "zh": "兔子",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.mouse",
+   "en": "mouse",
+   "zh": "老鼠",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.hamster",
+   "en": "hamster",
+   "zh": "仓鼠",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐹",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.pig",
+   "en": "pig",
+   "zh": "猪",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐖",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.cow",
+   "en": "cow",
+   "zh": "奶牛",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.horse",
+   "en": "horse",
+   "zh": "马",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐎",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.sheep",
+   "en": "sheep",
+   "zh": "绵羊",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.goat",
+   "en": "goat",
+   "zh": "山羊",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.chicken",
+   "en": "chicken",
+   "zh": "鸡",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.chick",
+   "en": "chick",
+   "zh": "小鸡",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.duck",
+   "en": "duck",
+   "zh": "鸭子",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.goose",
+   "en": "goose",
+   "zh": "鹅",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🪿",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.turkey",
+   "en": "turkey",
+   "zh": "火鸡",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.donkey",
+   "en": "donkey",
+   "zh": "驴",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🫏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.camel",
+   "en": "camel",
+   "zh": "骆驼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.llama",
+   "en": "llama",
+   "zh": "羊驼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦙",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.lion",
+   "en": "lion",
+   "zh": "狮子",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.tiger",
+   "en": "tiger",
+   "zh": "老虎",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.leopard",
+   "en": "leopard",
+   "zh": "豹子",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.elephant",
+   "en": "elephant",
+   "zh": "大象",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐘",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.giraffe",
+   "en": "giraffe",
+   "zh": "长颈鹿",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.zebra",
+   "en": "zebra",
+   "zh": "斑马",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.monkey",
+   "en": "monkey",
+   "zh": "猴子",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.gorilla",
+   "en": "gorilla",
+   "zh": "大猩猩",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.panda",
+   "en": "panda",
+   "zh": "熊猫",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐼",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bear",
+   "en": "bear",
+   "zh": "熊",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐻",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.polar-bear",
+   "en": "polar bear",
+   "zh": "北极熊",
+   "topicId": "animals",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🐻‍❄️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.koala",
+   "en": "koala",
+   "zh": "考拉",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.kangaroo",
+   "en": "kangaroo",
+   "zh": "袋鼠",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦘",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.fox",
+   "en": "fox",
+   "zh": "狐狸",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.wolf",
+   "en": "wolf",
+   "zh": "狼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐺",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.deer",
+   "en": "deer",
+   "zh": "鹿",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦌",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.hippo",
+   "en": "hippo",
+   "zh": "河马",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦛",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.rhino",
+   "en": "rhino",
+   "zh": "犀牛",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.squirrel",
+   "en": "squirrel",
+   "zh": "松鼠",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐿️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.hedgehog",
+   "en": "hedgehog",
+   "zh": "刺猬",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦔",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bat",
+   "en": "bat",
+   "zh": "蝙蝠",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.raccoon",
+   "en": "raccoon",
+   "zh": "浣熊",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.skunk",
+   "en": "skunk",
+   "zh": "臭鼬",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.otter",
+   "en": "otter",
+   "zh": "水獭",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.sloth",
+   "en": "sloth",
+   "zh": "树懒",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦥",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.beaver",
+   "en": "beaver",
+   "zh": "河狸",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bison",
+   "en": "bison",
+   "zh": "野牛",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦬",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bird",
+   "en": "bird",
+   "zh": "鸟",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.eagle",
+   "en": "eagle",
+   "zh": "老鹰",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.owl",
+   "en": "owl",
+   "zh": "猫头鹰",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.parrot",
+   "en": "parrot",
+   "zh": "鹦鹉",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦜",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.peacock",
+   "en": "peacock",
+   "zh": "孔雀",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦚",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.flamingo",
+   "en": "flamingo",
+   "zh": "火烈鸟",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦩",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.swan",
+   "en": "swan",
+   "zh": "天鹅",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.penguin",
+   "en": "penguin",
+   "zh": "企鹅",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.dove",
+   "en": "dove",
+   "zh": "鸽子",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🕊️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.fish",
+   "en": "fish",
+   "zh": "鱼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐟",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.tropical-fish",
+   "en": "tropical fish",
+   "zh": "热带鱼",
+   "topicId": "animals",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🐠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.shark",
+   "en": "shark",
+   "zh": "鲨鱼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.whale",
+   "en": "whale",
+   "zh": "鲸鱼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.dolphin",
+   "en": "dolphin",
+   "zh": "海豚",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐬",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.seal",
+   "en": "seal",
+   "zh": "海豹",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦭",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.octopus",
+   "en": "octopus",
+   "zh": "章鱼",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐙",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.crab",
+   "en": "crab",
+   "zh": "螃蟹",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.lobster",
+   "en": "lobster",
+   "zh": "龙虾",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.shrimp",
+   "en": "shrimp",
+   "zh": "虾",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.squid",
+   "en": "squid",
+   "zh": "鱿鱼",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.jellyfish",
+   "en": "jellyfish",
+   "zh": "水母",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🪼",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.turtle",
+   "en": "turtle",
+   "zh": "乌龟",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.frog",
+   "en": "frog",
+   "zh": "青蛙",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐸",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.snake",
+   "en": "snake",
+   "zh": "蛇",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.lizard",
+   "en": "lizard",
+   "zh": "蜥蜴",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦎",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.crocodile",
+   "en": "crocodile",
+   "zh": "鳄鱼",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.dinosaur",
+   "en": "dinosaur",
+   "zh": "恐龙",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.butterfly",
+   "en": "butterfly",
+   "zh": "蝴蝶",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bee",
+   "en": "bee",
+   "zh": "蜜蜂",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.ant",
+   "en": "ant",
+   "zh": "蚂蚁",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐜",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.ladybird",
+   "en": "ladybird",
+   "zh": "瓢虫",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.snail",
+   "en": "snail",
+   "zh": "蜗牛",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐌",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.spider",
+   "en": "spider",
+   "zh": "蜘蛛",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🕷️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.caterpillar",
+   "en": "caterpillar",
+   "zh": "毛毛虫",
+   "topicId": "animals",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🐛",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.beetle",
+   "en": "beetle",
+   "zh": "甲虫",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🪲",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.cricket",
+   "en": "cricket",
+   "zh": "蟋蟀",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.mosquito",
+   "en": "mosquito",
+   "zh": "蚊子",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦟",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.worm",
+   "en": "worm",
+   "zh": "虫子",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🪱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.fly",
+   "en": "fly",
+   "zh": "苍蝇",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🪰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.unicorn",
+   "en": "unicorn",
+   "zh": "独角兽",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🦄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.dragon",
+   "en": "dragon",
+   "zh": "龙",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.puppy",
+   "en": "puppy",
+   "zh": "小狗",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.kitten",
+   "en": "kitten",
+   "zh": "小猫",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.bunny",
+   "en": "bunny",
+   "zh": "小兔子",
+   "topicId": "animals",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "animals.piglet",
+   "en": "piglet",
+   "zh": "小猪",
+   "topicId": "animals",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐷",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.apple",
+   "en": "apple",
+   "zh": "苹果",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍎",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.green-apple",
+   "en": "green apple",
+   "zh": "青苹果",
+   "topicId": "fruits",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.pear",
+   "en": "pear",
+   "zh": "梨",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.orange",
+   "en": "orange",
+   "zh": "橙子",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.lemon",
+   "en": "lemon",
+   "zh": "柠檬",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.banana",
+   "en": "banana",
+   "zh": "香蕉",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍌",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.watermelon",
+   "en": "watermelon",
+   "zh": "西瓜",
+   "topicId": "fruits",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.grapes",
+   "en": "grapes",
+   "zh": "葡萄",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.strawberry",
+   "en": "strawberry",
+   "zh": "草莓",
+   "topicId": "fruits",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.blueberry",
+   "en": "blueberry",
+   "zh": "蓝莓",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🫐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.melon",
+   "en": "melon",
+   "zh": "甜瓜",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.cherry",
+   "en": "cherry",
+   "zh": "樱桃",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.peach",
+   "en": "peach",
+   "zh": "桃子",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.mango",
+   "en": "mango",
+   "zh": "芒果",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥭",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.pineapple",
+   "en": "pineapple",
+   "zh": "菠萝",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.coconut",
+   "en": "coconut",
+   "zh": "椰子",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥥",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.kiwi",
+   "en": "kiwi",
+   "zh": "猕猴桃",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.tomato",
+   "en": "tomato",
+   "zh": "西红柿",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.avocado",
+   "en": "avocado",
+   "zh": "牛油果",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.olive",
+   "en": "olive",
+   "zh": "橄榄",
+   "topicId": "fruits",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🫒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "fruits.chestnut",
+   "en": "chestnut",
+   "zh": "栗子",
+   "topicId": "fruits",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.one",
+   "en": "one",
+   "zh": "一",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.two",
+   "en": "two",
+   "zh": "二",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "2️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.three",
+   "en": "three",
+   "zh": "三",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "3️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.four",
+   "en": "four",
+   "zh": "四",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "4️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.five",
+   "en": "five",
+   "zh": "五",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "5️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.six",
+   "en": "six",
+   "zh": "六",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "6️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.seven",
+   "en": "seven",
+   "zh": "七",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "7️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.eight",
+   "en": "eight",
+   "zh": "八",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "8️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.nine",
+   "en": "nine",
+   "zh": "九",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "9️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.ten",
+   "en": "ten",
+   "zh": "十",
+   "topicId": "numbers",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🔟",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.eleven",
+   "en": "eleven",
+   "zh": "十一",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣1️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.twelve",
+   "en": "twelve",
+   "zh": "十二",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣2️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.thirteen",
+   "en": "thirteen",
+   "zh": "十三",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣3️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.fourteen",
+   "en": "fourteen",
+   "zh": "十四",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣4️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.fifteen",
+   "en": "fifteen",
+   "zh": "十五",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣5️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.sixteen",
+   "en": "sixteen",
+   "zh": "十六",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣6️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.seventeen",
+   "en": "seventeen",
+   "zh": "十七",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣7️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.eighteen",
+   "en": "eighteen",
+   "zh": "十八",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣8️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.nineteen",
+   "en": "nineteen",
+   "zh": "十九",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "1️⃣9️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "numbers.twenty",
+   "en": "twenty",
+   "zh": "二十",
+   "topicId": "numbers",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "2️⃣0️⃣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.red",
+   "en": "red",
+   "zh": "红色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🔴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.orange",
+   "en": "orange",
+   "zh": "橙色",
+   "topicId": "colors",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🟠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.yellow",
+   "en": "yellow",
+   "zh": "黄色",
+   "topicId": "colors",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🟡",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.green",
+   "en": "green",
+   "zh": "绿色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🟢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.blue",
+   "en": "blue",
+   "zh": "蓝色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🔵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.purple",
+   "en": "purple",
+   "zh": "紫色",
+   "topicId": "colors",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🟣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.brown",
+   "en": "brown",
+   "zh": "棕色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🟤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.black",
+   "en": "black",
+   "zh": "黑色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⚫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.white",
+   "en": "white",
+   "zh": "白色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⚪",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.pink",
+   "en": "pink",
+   "zh": "粉色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🩷",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.grey",
+   "en": "grey",
+   "zh": "灰色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🩶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.light-blue",
+   "en": "light blue",
+   "zh": "浅蓝色",
+   "topicId": "colors",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🩵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.gold",
+   "en": "gold",
+   "zh": "金色",
+   "topicId": "colors",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.silver",
+   "en": "silver",
+   "zh": "银色",
+   "topicId": "colors",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "colors.rainbow",
+   "en": "rainbow",
+   "zh": "彩虹",
+   "topicId": "colors",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.head",
+   "en": "head",
+   "zh": "头",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🗣️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.face",
+   "en": "face",
+   "zh": "脸",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🙂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.hair",
+   "en": "hair",
+   "zh": "头发",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.eye",
+   "en": "eye",
+   "zh": "眼睛",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👁️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.eyes",
+   "en": "eyes",
+   "zh": "双眼",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.ear",
+   "en": "ear",
+   "zh": "耳朵",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.nose",
+   "en": "nose",
+   "zh": "鼻子",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.mouth",
+   "en": "mouth",
+   "zh": "嘴巴",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.tongue",
+   "en": "tongue",
+   "zh": "舌头",
+   "topicId": "body",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.tooth",
+   "en": "tooth",
+   "zh": "牙齿",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦷",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.lips",
+   "en": "lips",
+   "zh": "嘴唇",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.hand",
+   "en": "hand",
+   "zh": "手",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "✋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.finger",
+   "en": "finger",
+   "zh": "手指",
+   "topicId": "body",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.thumb",
+   "en": "thumb",
+   "zh": "大拇指",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.fist",
+   "en": "fist",
+   "zh": "拳头",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.arm",
+   "en": "arm",
+   "zh": "手臂",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💪",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.leg",
+   "en": "leg",
+   "zh": "腿",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.foot",
+   "en": "foot",
+   "zh": "脚",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.brain",
+   "en": "brain",
+   "zh": "大脑",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.heart",
+   "en": "heart",
+   "zh": "心脏",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🫀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.lungs",
+   "en": "lungs",
+   "zh": "肺",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🫁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.bone",
+   "en": "bone",
+   "zh": "骨头",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🦴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.nail",
+   "en": "nail",
+   "zh": "指甲",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.beard",
+   "en": "beard",
+   "zh": "胡子",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧔",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "body.body",
+   "en": "body",
+   "zh": "身体",
+   "topicId": "body",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.bread",
+   "en": "bread",
+   "zh": "面包",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.rice",
+   "en": "rice",
+   "zh": "米饭",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍚",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.noodles",
+   "en": "noodles",
+   "zh": "面条",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍜",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.dumplings",
+   "en": "dumplings",
+   "zh": "饺子",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥟",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.egg",
+   "en": "egg",
+   "zh": "鸡蛋",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥚",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.fried-egg",
+   "en": "fried egg",
+   "zh": "煎蛋",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍳",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cheese",
+   "en": "cheese",
+   "zh": "奶酪",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.butter",
+   "en": "butter",
+   "zh": "黄油",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧈",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.meat",
+   "en": "meat",
+   "zh": "肉",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍖",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.chicken-leg",
+   "en": "chicken leg",
+   "zh": "鸡腿",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.bacon",
+   "en": "bacon",
+   "zh": "培根",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.steak",
+   "en": "steak",
+   "zh": "牛排",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥩",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.hamburger",
+   "en": "hamburger",
+   "zh": "汉堡",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍔",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.hot-dog",
+   "en": "hot dog",
+   "zh": "热狗",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌭",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.pizza",
+   "en": "pizza",
+   "zh": "比萨",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.sandwich",
+   "en": "sandwich",
+   "zh": "三明治",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥪",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.taco",
+   "en": "taco",
+   "zh": "玉米卷",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌮",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.french-fries",
+   "en": "French fries",
+   "zh": "薯条",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍟",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.popcorn",
+   "en": "popcorn",
+   "zh": "爆米花",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍿",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.salad",
+   "en": "salad",
+   "zh": "沙拉",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.soup",
+   "en": "soup",
+   "zh": "汤",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍲",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.spaghetti",
+   "en": "spaghetti",
+   "zh": "意大利面",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.sushi",
+   "en": "sushi",
+   "zh": "寿司",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.rice-ball",
+   "en": "rice ball",
+   "zh": "饭团",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍙",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.curry",
+   "en": "curry",
+   "zh": "咖喱饭",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍛",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.mooncake",
+   "en": "mooncake",
+   "zh": "月饼",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥮",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.pancakes",
+   "en": "pancakes",
+   "zh": "松饼",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.waffle",
+   "en": "waffle",
+   "zh": "华夫饼",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.bagel",
+   "en": "bagel",
+   "zh": "百吉饼",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥯",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.croissant",
+   "en": "croissant",
+   "zh": "牛角面包",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.pretzel",
+   "en": "pretzel",
+   "zh": "椒盐卷饼",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cake",
+   "en": "cake",
+   "zh": "蛋糕",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.birthday-cake",
+   "en": "birthday cake",
+   "zh": "生日蛋糕",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🎂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cupcake",
+   "en": "cupcake",
+   "zh": "纸杯蛋糕",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.pie",
+   "en": "pie",
+   "zh": "馅饼",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cookie",
+   "en": "cookie",
+   "zh": "饼干",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍪",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.chocolate",
+   "en": "chocolate",
+   "zh": "巧克力",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.candy",
+   "en": "candy",
+   "zh": "糖果",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍬",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.lollipop",
+   "en": "lollipop",
+   "zh": "棒棒糖",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍭",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.ice-cream",
+   "en": "ice cream",
+   "zh": "冰淇淋",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.doughnut",
+   "en": "doughnut",
+   "zh": "甜甜圈",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍩",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.honey",
+   "en": "honey",
+   "zh": "蜂蜜",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍯",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.salt",
+   "en": "salt",
+   "zh": "盐",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.carrot",
+   "en": "carrot",
+   "zh": "胡萝卜",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.corn",
+   "en": "corn",
+   "zh": "玉米",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌽",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.potato",
+   "en": "potato",
+   "zh": "土豆",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥔",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.sweet-potato",
+   "en": "sweet potato",
+   "zh": "红薯",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.broccoli",
+   "en": "broccoli",
+   "zh": "西兰花",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cucumber",
+   "en": "cucumber",
+   "zh": "黄瓜",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.pepper",
+   "en": "pepper",
+   "zh": "辣椒",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌶️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.green-pepper",
+   "en": "green pepper",
+   "zh": "青椒",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🫑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.eggplant",
+   "en": "eggplant",
+   "zh": "茄子",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.mushroom",
+   "en": "mushroom",
+   "zh": "蘑菇",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.onion",
+   "en": "onion",
+   "zh": "洋葱",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.garlic",
+   "en": "garlic",
+   "zh": "大蒜",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.lettuce",
+   "en": "lettuce",
+   "zh": "生菜",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🥬",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.beans",
+   "en": "beans",
+   "zh": "豆子",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🫘",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.ginger",
+   "en": "ginger",
+   "zh": "姜",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🫚",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.milk",
+   "en": "milk",
+   "zh": "牛奶",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥛",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.water",
+   "en": "water",
+   "zh": "水",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.juice",
+   "en": "juice",
+   "zh": "果汁",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.tea",
+   "en": "tea",
+   "zh": "茶",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.coffee",
+   "en": "coffee",
+   "zh": "咖啡",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "☕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.cola",
+   "en": "cola",
+   "zh": "可乐",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.bubble-tea",
+   "en": "bubble tea",
+   "zh": "珍珠奶茶",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🧋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.coconut-water",
+   "en": "coconut water",
+   "zh": "椰子水",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🥥",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.soft-ice-cream",
+   "en": "soft ice cream",
+   "zh": "甜筒冰淇淋",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.ice",
+   "en": "ice",
+   "zh": "冰块",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.bowl",
+   "en": "bowl",
+   "zh": "碗",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.chopsticks",
+   "en": "chopsticks",
+   "zh": "筷子",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🥢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.spoon",
+   "en": "spoon",
+   "zh": "勺子",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.fork-and-knife",
+   "en": "fork and knife",
+   "zh": "刀叉",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.plate",
+   "en": "plate",
+   "zh": "盘子",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍽️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.lunch-box",
+   "en": "lunch box",
+   "zh": "饭盒",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.oden",
+   "en": "oden",
+   "zh": "关东煮",
+   "topicId": "food",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.fortune-cookie",
+   "en": "fortune cookie",
+   "zh": "幸运饼干",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🥠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.shaved-ice",
+   "en": "shaved ice",
+   "zh": "刨冰",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.custard",
+   "en": "custard",
+   "zh": "布丁",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍮",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.flatbread",
+   "en": "flatbread",
+   "zh": "烤饼",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🫓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.falafel",
+   "en": "falafel",
+   "zh": "炸豆丸子",
+   "topicId": "food",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "food.shrimp-tempura",
+   "en": "shrimp tempura",
+   "zh": "炸虾",
+   "topicId": "food",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🍤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.car",
+   "en": "car",
+   "zh": "小汽车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.bus",
+   "en": "bus",
+   "zh": "公交车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚌",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.taxi",
+   "en": "taxi",
+   "zh": "出租车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚕",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.train",
+   "en": "train",
+   "zh": "火车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.high-speed-train",
+   "en": "high-speed train",
+   "zh": "高铁",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.subway",
+   "en": "subway",
+   "zh": "地铁",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.tram",
+   "en": "tram",
+   "zh": "有轨电车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.monorail",
+   "en": "monorail",
+   "zh": "单轨列车",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.truck",
+   "en": "truck",
+   "zh": "卡车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚚",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.van",
+   "en": "van",
+   "zh": "面包车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.jeep",
+   "en": "jeep",
+   "zh": "越野车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚙",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.racing-car",
+   "en": "racing car",
+   "zh": "赛车",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🏎️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.police-car",
+   "en": "police car",
+   "zh": "警车",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.ambulance",
+   "en": "ambulance",
+   "zh": "救护车",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.fire-engine",
+   "en": "fire engine",
+   "zh": "消防车",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.tractor",
+   "en": "tractor",
+   "zh": "拖拉机",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚜",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.bike",
+   "en": "bike",
+   "zh": "自行车",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚲",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.motorbike",
+   "en": "motorbike",
+   "zh": "摩托车",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🏍️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.scooter",
+   "en": "scooter",
+   "zh": "滑板车",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🛴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.skateboard",
+   "en": "skateboard",
+   "zh": "滑板",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🛹",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.plane",
+   "en": "plane",
+   "zh": "飞机",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "✈️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.helicopter",
+   "en": "helicopter",
+   "zh": "直升机",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.rocket",
+   "en": "rocket",
+   "zh": "火箭",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.flying-saucer",
+   "en": "flying saucer",
+   "zh": "飞碟",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🛸",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.parachute",
+   "en": "parachute",
+   "zh": "降落伞",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🪂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.boat",
+   "en": "boat",
+   "zh": "帆船",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⛵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.ship",
+   "en": "ship",
+   "zh": "轮船",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.speedboat",
+   "en": "speedboat",
+   "zh": "快艇",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.ferry",
+   "en": "ferry",
+   "zh": "渡轮",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⛴️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.canoe",
+   "en": "canoe",
+   "zh": "独木舟",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🛶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.cable-car",
+   "en": "cable car",
+   "zh": "缆车",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚡",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.trolleybus",
+   "en": "trolleybus",
+   "zh": "无轨电车",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚎",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.sled",
+   "en": "sled",
+   "zh": "雪橇",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🛷",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.wheelchair",
+   "en": "wheelchair",
+   "zh": "轮椅",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🦽",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.traffic-light",
+   "en": "traffic light",
+   "zh": "红绿灯",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🚦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.stop-sign",
+   "en": "stop sign",
+   "zh": "停车标志",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🛑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.road",
+   "en": "road",
+   "zh": "公路",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🛣️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.station",
+   "en": "station",
+   "zh": "车站",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.gas-station",
+   "en": "gas station",
+   "zh": "加油站",
+   "topicId": "transport",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "⛽",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.bus-stop",
+   "en": "bus stop",
+   "zh": "公交站",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🚏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.tyre",
+   "en": "tyre",
+   "zh": "轮胎",
+   "topicId": "transport",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🛞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "transport.anchor",
+   "en": "anchor",
+   "zh": "船锚",
+   "topicId": "transport",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "⚓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.family",
+   "en": "family",
+   "zh": "家庭",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👪",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.father",
+   "en": "father",
+   "zh": "爸爸",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.mother",
+   "en": "mother",
+   "zh": "妈妈",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👩",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.parents",
+   "en": "parents",
+   "zh": "父母",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.grandfather",
+   "en": "grandfather",
+   "zh": "爷爷 / 外公",
+   "topicId": "family",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "👴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.grandmother",
+   "en": "grandmother",
+   "zh": "奶奶 / 外婆",
+   "topicId": "family",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "👵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.grandparent",
+   "en": "grandparent",
+   "zh": "祖辈",
+   "topicId": "family",
+   "level": 3,
+   "image": {
+    "type": "emoji",
+    "src": "🧓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.brother",
+   "en": "brother",
+   "zh": "兄弟",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.sister",
+   "en": "sister",
+   "zh": "姐妹",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "👧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.baby",
+   "en": "baby",
+   "zh": "宝宝",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.child",
+   "en": "child",
+   "zh": "孩子",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.uncle",
+   "en": "uncle",
+   "zh": "叔叔 / 舅舅",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧔‍♂️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.aunt",
+   "en": "aunt",
+   "zh": "阿姨 / 姑姑",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👩‍🦰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.cousin",
+   "en": "cousin",
+   "zh": "堂/表兄弟姐妹",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧑‍🦱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.husband",
+   "en": "husband",
+   "zh": "丈夫",
+   "topicId": "family",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🤵",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.wife",
+   "en": "wife",
+   "zh": "妻子",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👰",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.twins",
+   "en": "twins",
+   "zh": "双胞胎",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👯",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.home",
+   "en": "home",
+   "zh": "家",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏠",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.pet",
+   "en": "pet",
+   "zh": "宠物",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🐾",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "family.love",
+   "en": "love",
+   "zh": "爱",
+   "topicId": "family",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "❤️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.january",
+   "en": "January",
+   "zh": "一月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "⛄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.february",
+   "en": "February",
+   "zh": "二月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🧧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.march",
+   "en": "March",
+   "zh": "三月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.april",
+   "en": "April",
+   "zh": "四月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌧️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.may",
+   "en": "May",
+   "zh": "五月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌷",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.june",
+   "en": "June",
+   "zh": "六月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🍦",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.july",
+   "en": "July",
+   "zh": "七月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏖️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.august",
+   "en": "August",
+   "zh": "八月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.september",
+   "en": "September",
+   "zh": "九月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.october",
+   "en": "October",
+   "zh": "十月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.november",
+   "en": "November",
+   "zh": "十一月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🍁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.december",
+   "en": "December",
+   "zh": "十二月",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.monday",
+   "en": "Monday",
+   "zh": "星期一",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌙",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.tuesday",
+   "en": "Tuesday",
+   "zh": "星期二",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🔥",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.wednesday",
+   "en": "Wednesday",
+   "zh": "星期三",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🐫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.thursday",
+   "en": "Thursday",
+   "zh": "星期四",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "⚡",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.friday",
+   "en": "Friday",
+   "zh": "星期五",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.saturday",
+   "en": "Saturday",
+   "zh": "星期六",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🪐",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.sunday",
+   "en": "Sunday",
+   "zh": "星期日",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🌞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.day",
+   "en": "day",
+   "zh": "白天 / 天",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🌤️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.week",
+   "en": "week",
+   "zh": "周",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "📅",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.weekend",
+   "en": "weekend",
+   "zh": "周末",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🛝",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.month",
+   "en": "month",
+   "zh": "月",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🗓️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.year",
+   "en": "year",
+   "zh": "年",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🎆",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.today",
+   "en": "today",
+   "zh": "今天",
+   "topicId": "calendar",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "📍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "calendar.birthday",
+   "en": "birthday",
+   "zh": "生日",
+   "topicId": "calendar",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎁",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.run",
+   "en": "run",
+   "zh": "跑",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.walk",
+   "en": "walk",
+   "zh": "走",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚶",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.jump",
+   "en": "jump",
+   "zh": "跳",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🤸",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.swim",
+   "en": "swim",
+   "zh": "游泳",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.dance",
+   "en": "dance",
+   "zh": "跳舞",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "💃",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.sing",
+   "en": "sing",
+   "zh": "唱歌",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🎤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.read",
+   "en": "read",
+   "zh": "读",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "📖",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.write",
+   "en": "write",
+   "zh": "写",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "✍️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.draw",
+   "en": "draw",
+   "zh": "画画",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🎨",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.eat",
+   "en": "eat",
+   "zh": "吃",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "😋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.drink",
+   "en": "drink",
+   "zh": "喝",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.sleep",
+   "en": "sleep",
+   "zh": "睡觉",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "😴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.cry",
+   "en": "cry",
+   "zh": "哭",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "😢",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.laugh",
+   "en": "laugh",
+   "zh": "大笑",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "😂",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.smile",
+   "en": "smile",
+   "zh": "微笑",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "😊",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.climb",
+   "en": "climb",
+   "zh": "攀爬",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.ride",
+   "en": "ride",
+   "zh": "骑",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚴",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.fly",
+   "en": "fly",
+   "zh": "飞",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🕊️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.kick",
+   "en": "kick",
+   "zh": "踢",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⚽",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.throw",
+   "en": "throw",
+   "zh": "扔",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.catch",
+   "en": "catch",
+   "zh": "接住",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧤",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.clap",
+   "en": "clap",
+   "zh": "拍手",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.wave",
+   "en": "wave",
+   "zh": "挥手",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👋",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.cook",
+   "en": "cook",
+   "zh": "做饭",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧑‍🍳",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.wash",
+   "en": "wash",
+   "zh": "洗",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧼",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.brush",
+   "en": "brush",
+   "zh": "刷牙",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🪥",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.play",
+   "en": "play",
+   "zh": "玩",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧸",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.listen",
+   "en": "listen",
+   "zh": "听",
+   "topicId": "actions",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🎧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.look",
+   "en": "look",
+   "zh": "看",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👀",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.think",
+   "en": "think",
+   "zh": "想",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🤔",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.hug",
+   "en": "hug",
+   "zh": "拥抱",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🤗",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.sit",
+   "en": "sit",
+   "zh": "坐",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🪑",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.stand",
+   "en": "stand",
+   "zh": "站",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧍",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.open",
+   "en": "open",
+   "zh": "打开",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🔓",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.close",
+   "en": "close",
+   "zh": "关上",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🔒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.cut",
+   "en": "cut",
+   "zh": "剪",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "✂️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.paint",
+   "en": "paint",
+   "zh": "涂色",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🖌️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.skate",
+   "en": "skate",
+   "zh": "滑冰",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⛸️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.ski",
+   "en": "ski",
+   "zh": "滑雪",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "⛷️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.surf",
+   "en": "surf",
+   "zh": "冲浪",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏄",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.fish",
+   "en": "fish",
+   "zh": "钓鱼",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🎣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.shop",
+   "en": "shop",
+   "zh": "购物",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🛒",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.call",
+   "en": "call",
+   "zh": "打电话",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "📞",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.count",
+   "en": "count",
+   "zh": "数数",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧮",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.point",
+   "en": "point",
+   "zh": "指",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "👉",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.lift",
+   "en": "lift",
+   "zh": "举起",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🏋️",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.bow",
+   "en": "bow",
+   "zh": "鞠躬",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🙇",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.kneel",
+   "en": "kneel",
+   "zh": "跪",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧎",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.juggle",
+   "en": "juggle",
+   "zh": "抛接杂耍",
+   "topicId": "actions",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🤹",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.row",
+   "en": "row",
+   "zh": "划船",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🚣",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.whisper",
+   "en": "whisper",
+   "zh": "小声说",
+   "topicId": "actions",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🤫",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.yawn",
+   "en": "yawn",
+   "zh": "打哈欠",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🥱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.sneeze",
+   "en": "sneeze",
+   "zh": "打喷嚏",
+   "topicId": "actions",
+   "level": 2,
+   "image": {
+    "type": "emoji",
+    "src": "🤧",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.pray",
+   "en": "pray",
+   "zh": "祈祷",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🙏",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  },
+  {
+   "id": "actions.build",
+   "en": "build",
+   "zh": "搭建",
+   "topicId": "actions",
+   "level": 1,
+   "image": {
+    "type": "emoji",
+    "src": "🧱",
+    "license": "Noto Emoji by Google — emoji artwork Apache-2.0 (github.com/googlefonts/noto-emoji); rendered with bundled Noto Color Emoji font, SIL OFL 1.1",
+    "author": "Google Noto Emoji"
+   }
+  }
+ ]
+}

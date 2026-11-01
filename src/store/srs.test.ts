@@ -37,3 +37,14 @@ test("a lapse resets progress and counts the lapse", () => {
   assert.ok(c.s < before);
   assert.equal(isMastered(c), false);
 });
+
+test("grade limits cap the review interval", () => {
+  let now = Date.UTC(2026, 9, 25);
+  const opts = { maxInterval: 30, learningSteps: ["5m", "1d"] as ("5m" | "1d")[] };
+  let c = review(undefined, Rating.Good, now, 0.9, opts);
+  for (let i = 0; i < 12; i++) {
+    now = Math.max(c.due, now + DAY);
+    c = review(c, Rating.Easy, now, 0.9, opts);
+  }
+  assert.ok(c.due - now <= 31 * DAY, `interval ${(c.due - now) / DAY}`);
+});

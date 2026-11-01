@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from "react";
 import type { Accent } from "../atlas/types";
 import type { CardState, Grade } from "./srs";
+import { gradeConfig, isGrade, type SchoolGrade } from "../lib/grade";
 
 export type QuizKind = "meaning" | "picture" | "listen" | "spell";
 export type Step = { id: string; kind: "intro" } | { id: string; kind: QuizKind; retry?: boolean; options?: string[] };
@@ -47,36 +48,35 @@ export interface Progress {
 }
 
 export interface Settings {
+  /** Settings schema version; older or foreign settings are migrated by sanitizeSettings. */
+  schema: 3;
+  /** School grade 1–6; 0 until a parent picks one during onboarding. */
+  grade: SchoolGrade | 0;
   accent: Accent;
   autoplay: boolean;
   dailyNew: number;
   retention: number;
-  theme: "system" | "light" | "dark";
   sfx: boolean;
-  spell: boolean;
-  startLevel: number;
   onboarded: boolean;
-  dataset: "open" | "private";
-  ambience: "off" | "stars" | "rain" | "sea" | "forest" | "fire" | "voyage" | "cafe";
-  ambienceVolume: number;
-  splash: boolean;
 }
 
+export const SETTINGS_SCHEMA = 3 as const;
+
 export const defaultSettings: Settings = {
-  accent: "uk",
+  schema: SETTINGS_SCHEMA,
+  grade: 0,
+  accent: "us",
   autoplay: true,
-  dailyNew: 10,
+  dailyNew: 8,
   retention: 0.9,
-  theme: "dark",
   sfx: true,
-  spell: true,
-  startLevel: 0,
   onboarded: false,
-  dataset: "open",
-  ambience: "stars",
-  ambienceVolume: 0.45,
-  splash: true,
 };
+
+/** Settings after a grade is picked: the daily goal follows the grade (5 / 8 / 10). */
+export function settingsForGrade(s: Settings, grade: SchoolGrade): Settings {
+  return { ...s, grade, dailyNew: gradeConfig(grade).dailyNew };
+}
 
 export const emptyProgress = (datasetId: string): Progress => ({
   version: 2,
@@ -92,8 +92,8 @@ export const emptyProgress = (datasetId: string): Progress => ({
 export const dayKey = (d = new Date()) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 
-const SETTINGS_KEY = "word-atlas:settings";
-const progressKey = (id: string) => `word-atlas:v2:${id}`;
+const SETTINGS_KEY = "wordsprout:settings";
+const progressKey = (id: string) => `wordsprout:progress:${id}`;
 
 function read<T>(key: string): T | null {
   try {
@@ -162,17 +162,15 @@ export function sanitizeSettings(v: unknown): Settings {
   if (!isObj(v)) return s;
   if (v.accent === "uk" || v.accent === "us") s.accent = v.accent;
   if (typeof v.autoplay === "boolean") s.autoplay = v.autoplay;
-  if (num(v.dailyNew, 0, 100)) s.dailyNew = Math.round(v.dailyNew as number);
   if (num(v.retention, 0.7, 0.97)) s.retention = v.retention as number;
-  if (v.theme === "system" || v.theme === "light" || v.theme === "dark") s.theme = v.theme;
   if (typeof v.sfx === "boolean") s.sfx = v.sfx;
-  if (typeof v.spell === "boolean") s.spell = v.spell;
-  if (num(v.startLevel, 0, 5)) s.startLevel = Math.round(v.startLevel as number);
-  if (typeof v.onboarded === "boolean") s.onboarded = v.onboarded;
-  if (v.dataset === "open" || v.dataset === "private") s.dataset = v.dataset;
-  if (["off", "stars", "rain", "sea", "forest", "fire", "voyage", "cafe"].includes(v.ambience as string)) s.ambience = v.ambience as Settings["ambience"];
-  if (num(v.ambienceVolume, 0, 1)) s.ambienceVolume = v.ambienceVolume as number;
-  if (typeof v.splash === "boolean") s.splash = v.splash;
+  if (isGrade(v.grade)) {
+    s.grade = v.grade;
+    s.dailyNew = gradeConfig(v.grade).dailyNew;
+  }
+  if (num(v.dailyNew, 1, 30)) s.dailyNew = Math.round(v.dailyNew as number);
+  // Onboarding only counts as done once a valid grade exists (older schemas had no grade).
+  s.onboarded = v.onboarded === true && s.grade !== 0;
   return s;
 }
 
@@ -185,7 +183,7 @@ interface State {
 }
 
 let state: State = {
-  progress: emptyProgress("word-atlas-open"),
+  progress: emptyProgress("wordsprout-v1"),
   settings: sanitizeSettings(read(SETTINGS_KEY)),
   saveError: false,
 };
@@ -288,7 +286,7 @@ export function toggleBookmark(id: string) {
 export function exportBackup() {
   flush();
   const { progress, settings } = state;
-  return JSON.stringify({ app: "word-atlas", version: 2, exported: new Date().toISOString(), progress: { ...progress, session: null }, settings }, null, 1);
+  return JSON.stringify({ app: "wordsprout", version: 2, exported: new Date().toISOString(), progress: { ...progress, session: null }, settings }, null, 1);
 }
 
 function markDirty() {
@@ -302,12 +300,12 @@ export function importBackup(text: string): { ok: true; cards: number } | { ok: 
   } catch {
     return { ok: false, error: "文件不是有效的 JSON。" };
   }
-  if (!isObj(data) || data.app !== "word-atlas" || data.version !== 2 || !isObj(data.progress))
-    return { ok: false, error: "这不是词光的学习备份。" };
+  if (!isObj(data) || data.app !== "wordsprout" || data.version !== 2 || !isObj(data.progress))
+    return { ok: false, error: "这不是小词芽的学习备份。" };
   const id = state.progress.datasetId;
   if (data.progress.datasetId !== id) return { ok: false, error: "备份来自另一个词库，请先切换到对应词库。" };
   const progress = sanitizeProgress({ ...data.progress, session: null }, id);
-  state = { ...state, progress, settings: { ...sanitizeSettings(data.settings), onboarded: true } };
+  state = { ...state, progress, settings: (() => { const s = sanitizeSettings(data.settings); return { ...s, onboarded: s.grade !== 0 }; })() };
   emit();
   markDirty();
   flush();

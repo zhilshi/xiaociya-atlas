@@ -1,3 +1,4 @@
+/* Adapted from Word Atlas (https://github.com/designfuchen/word-atlas), MIT, © 2026 Word Atlas contributors. */
 import { createEmptyCard, fsrs, Rating, State, type Card, type Grade } from "ts-fsrs";
 
 /** Serialized FSRS card. Dates are epoch milliseconds to keep backups small and JSON-safe. */
@@ -19,12 +20,21 @@ export interface CardState {
 export { Rating };
 export type { Grade };
 
-const schedulers = new Map<number, ReturnType<typeof fsrs>>();
-const scheduler = (retention: number) => {
-  let s = schedulers.get(retention);
+export interface SchedulerOptions {
+  /** Longest gap between reviews, in days (shorter for younger children). */
+  maxInterval?: number;
+  learningSteps?: ("1m" | "5m" | "10m" | "1d")[];
+}
+
+const schedulers = new Map<string, ReturnType<typeof fsrs>>();
+const scheduler = (retention: number, o: SchedulerOptions = {}) => {
+  const steps = o.learningSteps ?? ["1m", "10m"];
+  const max = o.maxInterval ?? 36500;
+  const key = `${retention}|${max}|${steps.join(",")}`;
+  let s = schedulers.get(key);
   if (!s) {
-    s = fsrs({ request_retention: retention, enable_fuzz: true, enable_short_term: true, learning_steps: ["1m", "10m"], relearning_steps: ["10m"] });
-    schedulers.set(retention, s);
+    s = fsrs({ request_retention: retention, maximum_interval: max, enable_fuzz: true, enable_short_term: true, learning_steps: steps, relearning_steps: ["10m"] });
+    schedulers.set(key, s);
   }
   return s;
 };
@@ -56,9 +66,9 @@ const fromCard = (c: Card, seen: number): CardState => ({
   seen,
 });
 
-export function review(prev: CardState | undefined, grade: Grade, now: number, retention = 0.9): CardState {
+export function review(prev: CardState | undefined, grade: Grade, now: number, retention = 0.9, opts?: SchedulerOptions): CardState {
   const card = prev ? toCard(prev) : createEmptyCard(new Date(now));
-  const next = scheduler(retention).next(card, new Date(now), grade).card;
+  const next = scheduler(retention, opts).next(card, new Date(now), grade).card;
   return fromCard(next, prev?.seen ?? now);
 }
 

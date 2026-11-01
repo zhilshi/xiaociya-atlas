@@ -1,5 +1,6 @@
+/* Adapted from Word Atlas (https://github.com/designfuchen/word-atlas), MIT, © 2026 Word Atlas contributors. */
 import type { Atlas, WordRef } from "../atlas/types";
-import { MEDIA } from "../atlas/types";
+import { gradeConfig, type GradeConfig } from "../lib/grade";
 import { hashSeed, normalize, shuffle } from "../lib/text";
 import { isMastered, review, Rating, type Grade } from "./srs";
 import { bumpDay, dayKey, store, type ActiveSession, type Progress, type QuizKind, type Settings, type Step } from "./store";
@@ -15,68 +16,71 @@ export function newToday(p: Progress) {
   return p.days[dayKey()]?.n ?? 0;
 }
 
-/** Next unseen words along the learning path, starting at the learner's level. */
+/** Next unseen words along the path: the child's grade band first, then easier bands, then harder. */
 export function nextNew(atlas: Atlas, p: Progress, settings: Settings, count: number) {
+  const band = gradeConfig(settings.grade).band;
   const out: string[] = [];
-  const pass = (from: number) => {
+  const pass = (ok: (b: number) => boolean) => {
     for (const w of atlas.words) {
       if (out.length >= count) return;
-      if (w.cefr < from || p.cards[w.id] || out.includes(w.id)) continue;
+      if (!ok(w.band) || p.cards[w.id] || out.includes(w.id)) continue;
       out.push(w.id);
     }
   };
-  pass(settings.startLevel);
-  if (out.length < count) pass(0);
+  // Lower bands are prerequisites: a grade-5 beginner still meets "cat" before "kangaroo".
+  pass((b) => b <= band);
+  if (out.length < count) pass(() => true);
   return out;
 }
 
-export function todayPlan(atlas: Atlas, p: Progress, s: Settings) {
-  const due = dueIds(p).filter((id) => atlas.byId.has(id));
+export function todayPlan(atlas: Atlas, p: Progress, s: Settings, now = Date.now()) {
+  const due = dueIds(p, now).filter((id) => atlas.byId.has(id));
   const newLeft = Math.max(0, s.dailyNew - newToday(p));
   const fresh = nextNew(atlas, p, s, newLeft);
-  return { due, fresh, minutes: Math.max(1, Math.round(due.length * 0.25 + fresh.length * 0.9)) };
+  return { due, fresh, minutes: Math.max(1, Math.round(due.length * 0.3 + fresh.length * 1)) };
 }
 
-function quizKind(ref: WordRef, p: Progress, s: Settings, salt: number): QuizKind {
+/** Words a child can spell with tiles or keys: one word, letters only. */
+export const spellable = (w: WordRef, cfg: GradeConfig) =>
+  cfg.spell !== "none" && /^[a-z]+$/i.test(w.word) && w.word.length <= (cfg.spell === "tiles" ? 8 : 14);
+
+/**
+ * Question type per word and grade.
+ *   listen  – hear the word, tap the matching picture
+ *   picture – see picture + Chinese, tap the English word
+ *   meaning – read the English word, tap the Chinese (grades 3+)
+ *   spell   – tiles (grades 3–4) or keyboard (5–6); never for grades 1–2
+ */
+export function quizKind(ref: WordRef, p: Progress, s: Settings, salt: number): QuizKind {
+  const cfg = gradeConfig(s.grade);
   const c = p.cards[ref.id];
-  const hasImg = !!(ref.media & MEDIA.img);
   const roll = hashSeed(ref.id + salt) % 100;
-  if (!c || c.s < 2) {
-    if (hasImg && roll < 45) return "picture";
-    return roll < 80 ? "meaning" : "listen";
-  }
-  if (s.spell && (c.s >= 4 || roll < 35)) return roll < 75 ? "spell" : hasImg ? "picture" : "listen";
-  return roll < 50 ? "listen" : hasImg ? "picture" : "meaning";
+  if (cfg.band === 1) return roll < 50 ? "listen" : "picture";
+  if (!c || c.s < 2) return roll < 40 ? "listen" : roll < 75 ? "picture" : "meaning";
+  if (spellable(ref, cfg) && (c.s >= 4 || roll < 35)) return roll < 75 ? "spell" : "listen";
+  return roll < 40 ? "listen" : roll < 70 ? "picture" : "meaning";
 }
 
-/** Distractors that look plausible: same level, similar spelling or length, different meaning. */
+/** Three distractors, preferably from the same flower bed, with a different picture, meaning and spelling. */
 export function distractors(atlas: Atlas, ref: WordRef, kind: QuizKind, seed: number) {
-  const target = normalize(ref.word);
-  const zhCore = ref.zh.replace(/^[a-z.]+\s*/, "").split(/[；;，,]/)[0];
+  const target = normalize(ref.word).toLowerCase();
   const scored: [number, WordRef][] = [];
-  const pool = atlas.words;
-  const start = Math.max(0, ref.order - 400);
-  for (let i = start; i < Math.min(pool.length, ref.order + 400); i++) {
-    const w = pool[i];
-    if (w.id === ref.id || normalize(w.word) === target) continue;
-    if (zhCore && w.zh.includes(zhCore)) continue;
+  for (const w of atlas.words) {
+    if (w.id === ref.id || normalize(w.word).toLowerCase() === target) continue;
+    if (w.emoji === ref.emoji || w.zh === ref.zh) continue;
     let score = hashSeed(w.id + seed) % 100;
-    if (kind === "listen" || kind === "picture") {
-      if (w.word[0]?.toLowerCase() === target[0]) score += 120;
-      score += Math.max(0, 60 - Math.abs(w.word.length - target.length) * 20);
-    } else {
-      if (w.cefr === ref.cefr) score += 40;
-      if (w.zh.split(" ")[0] === ref.zh.split(" ")[0]) score += 60; // same part of speech
-    }
+    if (w.topic === ref.topic) score += 150;
+    if (Math.abs(w.band - ref.band) === 0) score += 40;
+    if (kind === "picture" && w.word[0]?.toLowerCase() === target[0]) score += 30;
     scored.push([score, w]);
   }
   scored.sort((a, b) => b[0] - a[0]);
-  const seen = new Set<string>();
+  const seen = new Set<string>([ref.emoji, ref.zh]);
   const picks: string[] = [];
   for (const [, w] of scored) {
-    const key = kind === "meaning" ? w.zh : normalize(w.word);
-    if (seen.has(key)) continue;
-    seen.add(key);
+    if (seen.has(w.emoji) || seen.has(w.zh)) continue;
+    seen.add(w.emoji);
+    seen.add(w.zh);
     picks.push(w.id);
     if (picks.length === 3) break;
   }
@@ -105,13 +109,12 @@ export function buildSession(atlas: Atlas, p: Progress, s: Settings, opts?: { id
   return { id: `s${seed}`, started: seed, steps, index: 0, graded: {}, newIds, reviewIds };
 }
 
-export function gradeFor(kind: QuizKind, correct: boolean, ms: number, hinted: boolean): Grade {
+export function gradeFor(kind: QuizKind, correct: boolean, ms: number, hinted: boolean, cfg: GradeConfig = gradeConfig(0)): Grade {
   if (!correct) return Rating.Again;
   if (hinted) return Rating.Hard;
-  const slow = kind === "spell" ? 20000 : 9000;
-  const fast = kind === "spell" ? 6000 : 2500;
+  const slow = kind === "spell" ? cfg.slowMs * 2 : cfg.slowMs;
   if (ms > slow) return Rating.Hard;
-  if (ms < fast && kind === "spell") return Rating.Easy;
+  if (cfg.allowEasy && kind === "spell" && ms < 6000) return Rating.Easy;
   return Rating.Good;
 }
 
@@ -126,7 +129,7 @@ export function answer(atlas: Atlas, step: Step & { kind: QuizKind }, correct: b
     if (first) {
       next = {
         ...next,
-        cards: { ...next.cards, [step.id]: review(p.cards[step.id], grade, Date.now(), settings.retention) },
+        cards: { ...next.cards, [step.id]: review(p.cards[step.id], grade, Date.now(), settings.retention, gradeConfig(settings.grade)) },
         session: { ...next.session!, graded: { ...sess.graded, [step.id]: grade } },
         mistakes: correct ? next.mistakes : [step.id, ...next.mistakes.filter((x) => x !== step.id)].slice(0, 300),
       };
@@ -138,7 +141,8 @@ export function answer(atlas: Atlas, step: Step & { kind: QuizKind }, correct: b
       const retries = steps.filter((x) => x.id === step.id && "retry" in x && x.retry).length;
       if (retries < 2) {
         const ref = atlas.byId.get(step.id)!;
-        const kind: QuizKind = step.kind === "meaning" ? (ref.media & MEDIA.img ? "picture" : "listen") : "meaning";
+        const band1 = gradeConfig(settings.grade).band === 1;
+        const kind: QuizKind = step.kind === "listen" ? "picture" : band1 || step.kind !== "picture" ? "listen" : "meaning";
         const at = Math.min(steps.length, sess.index + 4);
         steps.splice(at, 0, { id: step.id, kind, retry: true, options: distractors(atlas, ref, kind, Date.now()) });
         next = { ...next, session: { ...next.session!, steps } };
@@ -163,7 +167,14 @@ export function advance(seconds: number) {
 export function sessionStats(s: ActiveSession) {
   const graded = Object.values(s.graded);
   const correct = graded.filter((g) => g !== Rating.Again).length;
-  return { total: graded.length, correct, accuracy: graded.length ? Math.round((correct / graded.length) * 100) : 0 };
+  return { total: graded.length, correct, accuracy: graded.length ? Math.round((correct / graded.length) * 100) : 0, stars: starsFor(correct, graded.length) };
 }
 
 export const masteredCount = (p: Progress) => Object.values(p.cards).filter(isMastered).length;
+
+/** Encouraging 1–3 stars instead of a percentage: finishing always earns at least one. */
+export function starsFor(correct: number, total: number) {
+  if (!total) return 1;
+  const r = correct / total;
+  return r >= 0.9 ? 3 : r >= 0.6 ? 2 : 1;
+}

@@ -1,69 +1,35 @@
 export type Accent = "uk" | "us";
 
-/** Compact row from atlas/index.json: [id, word, zh, ipa, cefr, topic, media]. */
-export type IndexRow = [string, string, string, string, number, number, number];
+/** Grade band: 1 = grades 1–2, 2 = grades 3–4, 3 = grades 5–6. */
+export type Band = 1 | 2 | 3;
 
-export interface Sense {
-  pos: string;
-  zh: string;
-  en: string;
-}
-
-export interface Example {
-  en: string;
-  zh: string;
-}
-
-export interface Entry {
+export interface Topic {
   id: string;
-  w: string;
-  uk: string;
-  us: string;
-  senses: Sense[];
-  ex: Example[];
-  col: string[];
-  fam: string[];
-  syn: string[];
-  ant: string[];
-  tip: string;
-  cefr: string;
-  topic: string;
-  /** Usage caution (register, offensiveness, spelling), shown with the entry. */
-  note?: string;
-  /** Media bit flags, see MEDIA. */
-  m: number;
-  /** Absolute media URLs for datasets that do not follow the atlas layout. */
-  media?: { img?: string | null; uk?: string | null; us?: string | null; ex?: string | null; ex2?: string | null };
+  zh: string;
+  en: string;
+  icon: string;
+  color: "mint" | "cream" | "peach" | "sky" | "lavender";
 }
 
-export const MEDIA = { img: 1, uk: 2, us: 4, ex: 8, ex2: 16 } as const;
-
+/** One word in the 小词芽 lexicon (original content, emoji image for now). */
 export interface WordRef {
   id: string;
   word: string;
   zh: string;
-  ipa: string;
-  cefr: number;
+  emoji: string;
+  /** Index into Atlas.topics. */
   topic: number;
-  media: number;
-  /** Position in the learning path. */
+  topicId: string;
+  band: Band;
+  /** Position in the learning path (band, then topic, then lexicon order). */
   order: number;
 }
 
 export interface Atlas {
   id: string;
   name: string;
-  kind: "open" | "private";
   count: number;
-  examples: number;
-  illustrated: number;
-  topics: [string, string][];
-  cefr: string[];
+  topics: Topic[];
   words: WordRef[];
   byId: Map<string, WordRef>;
-  /** Loads full entries; chunked for the open atlas, in-memory for private sets. */
-  entry: (id: string) => Promise<Entry>;
-  peek: (id: string) => Entry | undefined;
-  img: (ref: WordRef | Entry, size?: "thumb" | "full") => string | null;
-  audio: (ref: WordRef | Entry, kind: "uk" | "us" | "ex" | "ex2") => string | null;
 }
